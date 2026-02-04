@@ -273,3 +273,15 @@ padding:80px 5%;
 .logo-img:hover{
     transform:scale(1.08);
 }
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:600;
+    color:#7CFF9B;
+}
+
+.logo img{
+    height:36px;
+    width:auto;
+}
