@@ -1,389 +1,374 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Ресторан «У Володи»</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ресторан «У Володи»</title>
+    <!-- Шрифт -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
 
-<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
 
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
+        body {
+            background: linear-gradient(135deg, #041f16, #063a28);
+            color: white;
+        }
 
-body{
-    font-family:'Montserrat',sans-serif;
-    background:linear-gradient(135deg,#064e3b,#022c22);
-    color:white;
-}
+        /* ================= HEADER ================= */
 
-/* HEADER */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
 
-header{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:rgba(0,0,0,0.7);
-    backdrop-filter:blur(10px);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 50px;
-    z-index:1000;
-}
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 22px;
+            font-weight: 700;
+            color: #4cff9a;
+        }
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    font-size:22px;
-    font-weight:600;
-    color:#7CFF9B;
-}
+        .logo img {
+            height: 45px;
+        }
 
-.logo img{
-    height:45px;
-}
+        nav a {
+            margin-left: 25px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
 
-/* MENU */
+        nav a:hover {
+            color: #4cff9a;
+        }
 
-nav a{
-    margin-left:25px;
-    text-decoration:none;
-    color:white;
-    font-weight:500;
-    transition:0.3s;
-}
+        /* ================= HERO ================= */
 
-nav a:hover{
-    color:#7CFF9B;
-}
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
 
-/* HERO */
+        .hero h1 {
+            font-size: 50px;
+            color: #4cff9a;
+            margin-bottom: 20px;
+        }
 
-.hero{
-    min-height:100vh;
-    background:
-    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
-    url("photo5.jpeg");
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
-}
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
 
-.hero h1{
-    font-size:50px;
-    margin-bottom:15px;
-}
+        .hero-buttons a {
+            padding: 14px 28px;
+            border-radius: 30px;
+            margin: 10px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s;
+            display: inline-block;
+        }
 
-.hero p{
-    font-size:20px;
-    margin-bottom:30px;
-    opacity:0.9;
-}
+        .btn-main {
+            background: #4cff9a;
+            color: black;
+        }
 
-/* BUTTONS */
+        .btn-outline {
+            border: 2px solid #4cff9a;
+            color: #4cff9a;
+        }
 
-.buttons{
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
-    justify-content:center;
-}
+        .hero-buttons a:hover {
+            transform: scale(1.05);
+        }
 
-.btn{
-    padding:14px 28px;
-    border-radius:30px;
-    font-weight:600;
-    text-decoration:none;
-    transition:0.3s;
-}
+        /* ================= MENU ================= */
 
-.btn-main{
-    background:#22c55e;
-    color:#022c22;
-}
+        section {
+            padding: 100px 50px;
+        }
 
-.btn-main:hover{
-    background:#7CFF9B;
-}
+        h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #4cff9a;
+        }
 
-.btn-outline{
-    border:2px solid #7CFF9B;
-    color:#7CFF9B;
-}
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
 
-.btn-outline:hover{
-    background:#7CFF9B;
-    color:#022c22;
-}
+        .card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            transition: 0.3s;
+        }
 
-/* SECTIONS */
+        .card:hover {
+            transform: translateY(-8px);
+        }
 
-section{
-    padding:90px 40px;
-    max-width:1200px;
-    margin:auto;
-}
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
 
-h2{
-    text-align:center;
-    font-size:36px;
-    margin-bottom:50px;
-    color:#7CFF9B;
-}
+        .card-content {
+            padding: 20px;
+        }
 
-/* ABOUT */
+        .card h3 {
+            color: #4cff9a;
+            margin-bottom: 10px;
+        }
 
-.about{
-    text-align:center;
-    font-size:18px;
-    opacity:0.9;
-    max-width:800px;
-    margin:auto;
-}
+        .price {
+            font-size: 20px;
+            font-weight: 700;
+            color: #4cff9a;
+            margin-top: 10px;
+        }
 
-/* MENU */
+        /* ================= CONTACT ================= */
 
-.menu-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
-}
+        .contact {
+            text-align: center;
+        }
 
-.card{
-    background:rgba(255,255,255,0.07);
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,0.5);
-    transition:0.3s;
-}
+        .contact p {
+            margin: 10px 0;
+            opacity: 0.9;
+        }
 
-.card:hover{
-    transform:translateY(-10px);
-}
+        footer {
+            background: black;
+            text-align: center;
+            padding: 20px;
+            opacity: 0.8;
+        }
 
-.card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-}
+        @media(max-width: 768px) {
 
-.card-content{
-    padding:20px;
-}
+            header {
+                padding: 15px 20px;
+                flex-direction: column;
+            }
 
-.card-content h3{
-    margin-bottom:8px;
-}
+            nav {
+                margin-top: 10px;
+            }
 
-.card-content p{
-    font-size:14px;
-    opacity:0.85;
-    margin-bottom:8px;
-}
+            .hero h1 {
+                font-size: 36px;
+            }
 
-.price{
-    color:#7CFF9B;
-    font-weight:600;
-}
+        }
 
-/* CONTACT */
-
-.contact{
-    text-align:center;
-    font-size:18px;
-}
-
-/* FOOTER */
-
-footer{
-    background:#021f18;
-    text-align:center;
-    padding:25px;
-    font-size:14px;
-    opacity:0.8;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-header{
-    flex-direction:column;
-    gap:10px;
-}
-
-.hero h1{
-    font-size:36px;
-}
-
-}
-
-</style>
+    </style>
 </head>
-
 <body>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 
 <header>
 
-<div class="logo">
+    <div class="logo">
+        <img src="logo.png" alt="Логотип">
+        У Володи
+    </div>
 
-<!-- ЛОГО -->
-<img src="logo.png" alt="Логотип">
-
-<span>У Володи</span>
-
-</div>
-
-<nav>
-<a href="#about">О нас</a>
-<a href="#menu">Меню</a>
-<a href="#contact">Контакты</a>
-</nav>
+    <nav>
+        <a href="#home">Главная</a>
+        <a href="#menu">Меню</a>
+        <a href="#contact">Контакты</a>
+    </nav>
 
 </header>
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 
-<div class="hero">
+<section class="hero" id="home">
 
-<h1>Ресторан «У Володи»</h1>
+    <h1>Ресторан «У Володи»</h1>
 
-<p>Домашняя кухня на севере Нячанга. Вкусно, честно, с душой.</p>
+    <p>
+        Домашняя русско-европейская кухня в Нячанге.
+        Вкусно. Честно. С душой.
+    </p>
 
-<div class="buttons">
+    <div class="hero-buttons">
 
-<a class="btn btn-main" href="#">
-Заказать онлайн
-</a>
+        <a href="#menu" class="btn-main">Меню</a>
 
-<a class="btn btn-outline" href="#menu">
-Меню
-</a>
+        <a href="https://maps.app.goo.gl/AqrXsXDzBmLCGXov6"
+           target="_blank"
+           class="btn-outline">
+            📍 Маршрут
+        </a>
 
-<a class="btn btn-outline" target="_blank"
-href="https://maps.app.goo.gl/AqrXsXDzBmLCGXov6">
-Маршрут
-</a>
-
-</div>
-
-</div>
-
-<!-- ABOUT -->
-
-<section id="about">
-
-<h2>О нас</h2>
-
-<p class="about">
-Ресторан «У Володи» — это уют, свежие продукты и настоящая домашняя кухня.
-Мы готовим с любовью и заботой о каждом госте.
-</p>
+    </div>
 
 </section>
 
-<!-- MENU -->
+<!-- ================= MENU ================= -->
 
 <section id="menu">
 
-<h2>Наше меню</h2>
+    <h2>Наше меню</h2>
 
-<div class="menu-grid">
+    <div class="menu-grid">
 
-<!-- 1 -->
+        <!-- 1 -->
 
-<div class="card">
-<img src="goviasgia.jpeg">
-<div class="card-content">
-<h3>Говядина с овощами</h3>
-<p>Обжаренная говядина с соусом</p>
-<p class="price">88.000 VND</p>
-</div>
-</div>
+        <div class="card">
+            <img src="goviasgia.jpeg">
+            <div class="card-content">
 
-<!-- 2 -->
+                <h3>Жареная говяжья вырезка</h3>
 
-<div class="card">
-<img src="fish_sebu.jpeg">
-<div class="card-content">
-<h3>Рыба Себу</h3>
-<p>Запечённая на гриле</p>
-<p class="price">85.000 VND</p>
-</div>
-</div>
+                <p>
+                    Нежные куски говядины с чесноком и специями.
+                    Подаётся с рисом или картофелем фри.
+                </p>
 
-<!-- 3 -->
+                <p>Вес: 230 г</p>
 
-<div class="card">
-<img src="kalmar.jpeg">
-<div class="card-content">
-<h3>Кальмар</h3>
-<p>С чесночным соусом</p>
-<p class="price">75.000 VND</p>
-</div>
-</div>
+                <div class="price">90 000 VND</div>
 
-<!-- 4 -->
+            </div>
+        </div>
 
-<div class="card">
-<img src="okun.jpeg">
-<div class="card-content">
-<h3>Окунь</h3>
-<p>Нежное филе</p>
-<p class="price">82.000 VND</p>
-</div>
-</div>
+        <!-- 2 -->
 
-<!-- 5 -->
+        <div class="card">
+            <img src="fishsebu.jpeg">
+            <div class="card-content">
 
-<div class="card">
-<img src="spagetimoreprodukti.jpeg">
-<div class="card-content">
-<h3>Паста с морепродуктами</h3>
-<p>Авторский рецепт</p>
-<p class="price">95.000 VND</p>
-</div>
-</div>
+                <h3>Рыба Себу</h3>
 
-</div>
+                <p>
+                    Свежая морская рыба на гриле с лимоном.
+                </p>
+
+                <p>Вес: 250 г</p>
+
+                <div class="price">85 000 VND</div>
+
+            </div>
+        </div>
+
+        <!-- 3 -->
+
+        <div class="card">
+            <img src="kalmar.jpeg">
+            <div class="card-content">
+
+                <h3>Кальмар на гриле</h3>
+
+                <p>
+                    Нежный кальмар с соусом и чесноком.
+                </p>
+
+                <p>Вес: 220 г</p>
+
+                <div class="price">75 000 VND</div>
+
+            </div>
+        </div>
+
+        <!-- 4 -->
+
+        <div class="card">
+            <img src="okun.jpeg">
+            <div class="card-content">
+
+                <h3>Окунь с соусом</h3>
+
+                <p>
+                    Филе окуня в авторском соусе.
+                </p>
+
+                <p>Вес: 240 г</p>
+
+                <div class="price">80 000 VND</div>
+
+            </div>
+        </div>
+
+        <!-- 5 -->
+
+        <div class="card">
+            <img src="spagetimoreprodukti.jpeg">
+            <div class="card-content">
+
+                <h3>Спагетти с морепродуктами</h3>
+
+                <p>
+                    Итальянская паста с морепродуктами.
+                </p>
+
+                <p>Вес: 300 г</p>
+
+                <div class="price">95 000 VND</div>
+
+            </div>
+        </div>
+
+    </div>
 
 </section>
 
-<!-- CONTACT -->
+<!-- ================= CONTACT ================= -->
 
-<section id="contact">
+<section class="contact" id="contact">
 
-<h2>Контакты</h2>
+    <h2>Контакты</h2>
 
-<p class="contact">
+    <p>📍 Нячанг, Вьетнам</p>
 
-📍 Нячанг, Вьетнам<br><br>
+    <p>📞 +84 000 000 000</p>
 
-📞 +84 XXX XXX XXX<br><br>
-
-🕒 10:00 – 23:00
-
-</p>
+    <p>🕒 10:00 – 23:00</p>
 
 </section>
 
 <footer>
 
-© 2026 Ресторан «У Володи»
+    © 2026 Ресторан «У Володи»
 
 </footer>
 
