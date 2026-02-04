@@ -6,21 +6,27 @@
 
 <title>Ресторан «У Володи» — Нячанг</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+/* RESET */
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Montserrat',sans-serif;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-background:#0f0f0f;
+background:linear-gradient(135deg,#061a14,#0f3d2e,#08221a);
 color:#fff;
-line-height:1.6;
+overflow-x:hidden;
 }
 
 /* HEADER */
@@ -29,42 +35,59 @@ header{
 position:fixed;
 top:0;
 width:100%;
-background:#111;
+background:rgba(0,0,0,.6);
+backdrop-filter:blur(15px);
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:15px 40px;
 z-index:1000;
+border-bottom:1px solid rgba(255,255,255,.1);
 }
 
 .logo{
-font-size:22px;
+font-size:24px;
 font-weight:700;
+letter-spacing:1px;
+color:#9dffb0;
 }
 
 nav a{
 color:#fff;
-margin:0 15px;
+margin:0 18px;
 text-decoration:none;
 font-weight:500;
+position:relative;
 }
 
-nav a:hover{
-color:#ffb400;
+nav a::after{
+content:"";
+position:absolute;
+bottom:-5px;
+left:0;
+width:0;
+height:2px;
+background:#9dffb0;
+transition:.3s;
+}
+
+nav a:hover::after{
+width:100%;
 }
 
 .lang button{
-background:none;
-border:1px solid #fff;
+background:rgba(255,255,255,.1);
+border:1px solid rgba(255,255,255,.3);
 color:#fff;
-margin-left:5px;
-padding:5px 8px;
+margin-left:6px;
+padding:6px 10px;
+border-radius:5px;
 cursor:pointer;
+transition:.3s;
 }
 
 .lang button:hover{
-background:#ffb400;
-border:none;
+background:#9dffb0;
 color:#000;
 }
 
@@ -73,7 +96,7 @@ color:#000;
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
 url("photo1.jpeg") center/cover no-repeat;
 display:flex;
 align-items:center;
@@ -82,47 +105,74 @@ text-align:center;
 padding:20px;
 }
 
+.hero-box{
+background:rgba(0,0,0,.5);
+padding:50px 40px;
+border-radius:20px;
+backdrop-filter:blur(20px);
+box-shadow:0 0 50px rgba(0,0,0,.7);
+animation:fadeIn 1.5s ease;
+}
+
 .hero h1{
-font-size:48px;
+font-size:52px;
 margin-bottom:20px;
+color:#9dffb0;
 }
 
 .hero p{
-font-size:20px;
+font-size:22px;
 margin-bottom:30px;
+opacity:.9;
 }
 
+/* BUTTONS */
+
 .btn{
-padding:12px 25px;
-border-radius:5px;
+padding:14px 28px;
+border-radius:30px;
 text-decoration:none;
 font-weight:600;
-margin:5px;
+margin:6px;
 display:inline-block;
+transition:.3s;
+letter-spacing:.5px;
 }
 
 .btn-main{
-background:#ffb400;
+background:linear-gradient(135deg,#7cff9f,#3fd67a);
 color:#000;
+box-shadow:0 5px 20px rgba(120,255,170,.4);
+}
+
+.btn-main:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 30px rgba(120,255,170,.7);
 }
 
 .btn-outline{
-border:2px solid #fff;
-color:#fff;
+border:2px solid #9dffb0;
+color:#9dffb0;
+}
+
+.btn-outline:hover{
+background:#9dffb0;
+color:#000;
 }
 
 /* SECTIONS */
 
 section{
-padding:80px 40px;
+padding:100px 40px;
 max-width:1200px;
 margin:auto;
 }
 
 section h2{
 text-align:center;
-font-size:36px;
-margin-bottom:40px;
+font-size:40px;
+margin-bottom:50px;
+color:#9dffb0;
 }
 
 /* ABOUT */
@@ -130,87 +180,128 @@ margin-bottom:40px;
 .about{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:40px;
+gap:50px;
 align-items:center;
+}
+
+.about-box{
+background:rgba(0,0,0,.4);
+padding:35px;
+border-radius:20px;
+backdrop-filter:blur(15px);
+box-shadow:0 0 25px rgba(0,0,0,.6);
 }
 
 .about img{
 width:100%;
-border-radius:10px;
+border-radius:20px;
+box-shadow:0 0 30px rgba(0,0,0,.7);
 }
 
 /* GALLERY */
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
 }
 
 .gallery img{
 width:100%;
-border-radius:10px;
-transition:.3s;
+border-radius:20px;
+transition:.5s;
+cursor:pointer;
 }
 
 .gallery img:hover{
-transform:scale(1.05);
+transform:scale(1.08) rotate(1deg);
+box-shadow:0 0 40px rgba(120,255,170,.5);
 }
 
 /* REVIEWS */
 
 .reviews{
+background:rgba(0,0,0,.4);
+padding:50px;
+border-radius:25px;
 text-align:center;
-background:#151515;
-padding:60px;
-border-radius:15px;
+backdrop-filter:blur(15px);
+box-shadow:0 0 40px rgba(0,0,0,.7);
 }
 
 .review-box{
 max-width:700px;
-margin:20px auto;
-background:#1f1f1f;
+margin:25px auto;
+background:rgba(255,255,255,.05);
 padding:25px;
-border-radius:10px;
-}
-
-.review-btn{
-margin-top:30px;
+border-radius:15px;
+border:1px solid rgba(255,255,255,.1);
 }
 
 /* CONTACT */
 
-.contact{
+.contact-box{
+background:rgba(0,0,0,.4);
+padding:40px;
+border-radius:25px;
 text-align:center;
+backdrop-filter:blur(15px);
 }
 
 iframe{
 width:100%;
-height:300px;
+height:320px;
 border:0;
-border-radius:10px;
-margin-top:20px;
+border-radius:15px;
+margin-top:25px;
 }
 
 /* FOOTER */
 
 footer{
-background:#111;
-padding:20px;
+background:#04140f;
+padding:25px;
 text-align:center;
 font-size:14px;
+opacity:.7;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* SCROLL EFFECT */
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
 }
 
 /* MOBILE */
 
-@media(max-width:768px){
+@media(max-width:900px){
 
 .about{
 grid-template-columns:1fr;
 }
 
 .hero h1{
-font-size:34px;
+font-size:36px;
 }
 
 }
@@ -222,7 +313,7 @@ font-size:34px;
 
 <header>
 
-<div class="logo">🍴 У Володи</div>
+<div class="logo">🌿 У Володи</div>
 
 <nav>
 <a href="#home">Главная</a>
@@ -245,15 +336,28 @@ font-size:34px;
 
 <section class="hero" id="home">
 
-<div>
+<div class="hero-box">
 
 <h1 id="title">Ресторан «У Володи»</h1>
 
 <p id="subtitle">Домашняя кухня в Нячанге — вкусно, честно и с душой</p>
 
-<a href="https://t.me/NhaTrangFoodBot" class="btn btn-main" target="_blank" id="orderBtn">Заказать в Telegram</a>
+<a href="https://t.me/NhaTrangFoodBot"
+class="btn btn-main"
+target="_blank"
+id="orderBtn">
 
-<a href="#about" class="btn btn-outline" id="moreBtn">Подробнее</a>
+Заказать
+
+</a>
+
+<a href="https://maps.app.goo.gl/AqrXsXDzBmLCGXov6"
+class="btn btn-outline"
+target="_blank">
+
+Маршрут
+
+</a>
 
 </div>
 
@@ -262,24 +366,26 @@ font-size:34px;
 
 <!-- ABOUT -->
 
-<section id="about">
+<section id="about" class="reveal">
 
 <h2 id="aboutTitle">О нас</h2>
 
 <div class="about">
 
-<div>
+<div class="about-box">
 
 <p id="aboutText">
-Мы готовим так, как готовим для своей семьи — из свежих продуктов, без химии и с любовью.
-Работаем с 2017 года и радуем гостей настоящей домашней кухней.
+Мы готовим для гостей так же, как для своей семьи — честно, вкусно и с любовью.
+Только свежие продукты и авторские рецепты.
 </p>
 
+<br>
+
 <ul>
-<li>✔ Свежие продукты</li>
+<li>✔ Домашняя кухня</li>
 <li>✔ Большие порции</li>
 <li>✔ Честные цены</li>
-<li>✔ Русскоязычный персонал</li>
+<li>✔ Уютная атмосфера</li>
 </ul>
 
 </div>
@@ -293,7 +399,7 @@ font-size:34px;
 
 <!-- GALLERY -->
 
-<section id="gallery">
+<section id="gallery" class="reveal">
 
 <h2 id="menuTitle">Наши блюда</h2>
 
@@ -312,28 +418,26 @@ font-size:34px;
 
 <!-- REVIEWS -->
 
-<section id="reviews">
+<section id="reviews" class="reveal">
 
 <h2 id="reviewsTitle">Отзывы гостей</h2>
 
 <div class="reviews">
 
 <div class="review-box">
-⭐️⭐️⭐️⭐️⭐️  
-<br>«Очень вкусно, как дома. Большие порции и приятные цены»
+⭐️⭐️⭐️⭐️⭐️ Отличная кухня, уютно и вкусно
 </div>
 
 <div class="review-box">
-⭐️⭐️⭐️⭐️⭐️  
-<br>«Лучший русский ресторан в Нячанге. Всегда приходим снова»
+⭐️⭐️⭐️⭐️⭐️ Лучший ресторан в Нячанге
 </div>
 
 <a href="https://maps.app.goo.gl/AqrXsXDzBmLCGXov6"
-class="btn btn-main review-btn"
+class="btn btn-main"
 target="_blank"
 id="reviewBtn">
 
-Оставить отзыв в Google
+Оставить отзыв
 
 </a>
 
@@ -344,15 +448,21 @@ id="reviewBtn">
 
 <!-- CONTACT -->
 
-<section id="contact">
+<section id="contact" class="reveal">
 
 <h2 id="contactTitle">Контакты</h2>
 
-<div class="contact">
+<div class="contact-box">
 
-<p id="address">
-📍 20 Nguyễn Hiền, Nha Trang
-</p>
+<p>📍 20 Nguyễn Hiền, Nha Trang</p>
+
+<a href="https://maps.app.goo.gl/AqrXsXDzBmLCGXov6"
+class="btn btn-outline"
+target="_blank">
+
+Проложить маршрут
+
+</a>
 
 <iframe
 src="https://www.google.com/maps?q=20%20Nguyen%20Hien%20Nha%20Trang&output=embed">
@@ -364,14 +474,12 @@ src="https://www.google.com/maps?q=20%20Nguyen%20Hien%20Nha%20Trang&output=embed
 
 
 <footer>
-
-© 2026 Ресторан «У Володи» — Нячанг
-
+© 2026 Ресторан «У Володи» — Nha Trang
 </footer>
 
 
 
-<!-- LANG SCRIPT -->
+<!-- JS -->
 
 <script>
 
@@ -380,39 +488,36 @@ const data = {
 ru:{
 title:"Ресторан «У Володи»",
 subtitle:"Домашняя кухня в Нячанге — вкусно, честно и с душой",
-order:"Заказать в Telegram",
-more:"Подробнее",
+order:"Заказать",
 about:"О нас",
-aboutText:"Мы готовим так, как готовим для своей семьи — из свежих продуктов, без химии и с любовью.",
+aboutText:"Мы готовим для гостей так же, как для своей семьи — честно, вкусно и с любовью.",
 menu:"Наши блюда",
 reviews:"Отзывы гостей",
-reviewBtn:"Оставить отзыв в Google",
+reviewBtn:"Оставить отзыв",
 contact:"Контакты"
 },
 
 en:{
 title:"Volodi Restaurant",
-subtitle:"Homestyle food in Nha Trang — tasty and honest",
-order:"Order via Telegram",
-more:"More",
+subtitle:"Homestyle food in Nha Trang",
+order:"Order",
 about:"About us",
-aboutText:"We cook like for our family — fresh products and love.",
+aboutText:"We cook with love and fresh ingredients.",
 menu:"Our dishes",
 reviews:"Reviews",
-reviewBtn:"Leave Google Review",
+reviewBtn:"Leave review",
 contact:"Contacts"
 },
 
 vi:{
 title:"Nhà hàng Volodi",
 subtitle:"Ẩm thực gia đình tại Nha Trang",
-order:"Đặt hàng Telegram",
-more:"Chi tiết",
+order:"Đặt món",
 about:"Về chúng tôi",
-aboutText:"Chúng tôi nấu ăn bằng sự tận tâm và nguyên liệu tươi.",
+aboutText:"Chúng tôi nấu ăn bằng tâm huyết.",
 menu:"Món ăn",
 reviews:"Đánh giá",
-reviewBtn:"Viết đánh giá Google",
+reviewBtn:"Viết đánh giá",
 contact:"Liên hệ"
 }
 
@@ -423,7 +528,6 @@ function setLang(l){
 document.getElementById("title").innerText=data[l].title;
 document.getElementById("subtitle").innerText=data[l].subtitle;
 document.getElementById("orderBtn").innerText=data[l].order;
-document.getElementById("moreBtn").innerText=data[l].more;
 document.getElementById("aboutTitle").innerText=data[l].about;
 document.getElementById("aboutText").innerText=data[l].aboutText;
 document.getElementById("menuTitle").innerText=data[l].menu;
@@ -432,6 +536,20 @@ document.getElementById("reviewBtn").innerText=data[l].reviewBtn;
 document.getElementById("contactTitle").innerText=data[l].contact;
 
 }
+
+/* SCROLL EFFECT */
+
+window.addEventListener("scroll",()=>{
+
+document.querySelectorAll(".reveal").forEach(el=>{
+
+if(el.getBoundingClientRect().top < window.innerHeight-100){
+el.classList.add("active");
+}
+
+});
+
+});
 
 </script>
 
