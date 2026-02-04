@@ -1,126 +1,102 @@
-<!DOCTYPE html>
-<html>
-<head><link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<meta charset="UTF-8">
-<title>У Володи</title>
-
-<style>
-
-body{
-margin:0;
-font-family:Arial;
-background:#064e3b;
-color:white;
-text-align:center;
-}
-
-header{
-background:black;
-padding:15px;
-}
-
-nav a{
-color:white;
-margin:0 15px;
-text-decoration:none;
-}
-
-.hero{
-padding:100px 20px;
-background:
-linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),
-url("Images/photo1.jpeg") center/cover;
-}
-
-section{padding:50px 20px;}
-
-.menu img{
-width:250px;
-border-radius:15px;
-}
-
-.card{
-background:#00000055;
-padding:20px;
-border-radius:15px;
-max-width:300px;
-margin:20px auto;
-}
-
-button{
-padding:12px 25px;
-border:none;
-border-radius:25px;
-background:#22c55e;
-margin:10px;
-cursor:pointer;
-}
-
-iframe{
-width:90%;
-height:300px;
-border:0;
-border-radius:15px;
-}
-
-</style>
-</head>
-
-<body>
-
-<header>
-<nav>
-<a href="#">Главная</a>
-<a href="#menu">Меню</a>
-<a href="#contact">Контакты</a>
-</nav>
-</header>
-
-<div class="hero">
-
-<h1>Ресторан «У Володи»</h1>
-<p>Домашняя кухня</p>
-
-<button onclick="window.open('https://t.me/NhaTrangFoodBot')">Заказать</button>
-
-</div>
-
 <section id="menu">
 
-<h2>Меню</h2>
+<h2>Наше меню</h2>
 
-<div class="card">
+<div class="menu-grid">
 
-<img src="Images/photo1.jpeg">
 
-<h3>Жареная говяжья вырезка</h3>
+<!-- БЛЮДО 1 -->
 
-<p>С чесноком и специями</p>
+<div class="dish-card">
 
-<p>230 г</p>
+<img src="Images/steak.jpg" alt="Жареная говядина">
 
-<b>90 000 ₫</b>
+<div class="info">
+
+<h3>Жареная говяжья вырезка (3 шт.)</h3>
+
+<p>
+Нежные куски говяжьей вырезки,
+обжаренные с чесноком и специями.
+</p>
+
+<ul class="dish-list">
+<li>Говяжья вырезка</li>
+<li>Чеснок</li>
+<li>Сливочное масло</li>
+<li>Соль, перец</li>
+<li>Рис / картофель фри</li>
+</ul>
+
+<p>Вес: 230 г</p>
+
+<div class="price">90 000 VND</div>
 
 </div>
+</div>
 
+
+<!-- БЛЮДО 2 -->
+
+<div class="dish-card">
+
+<img src="Images/soup.jpg" alt="Борщ">
+
+<div class="info">
+
+<h3>Домашний борщ</h3>
+
+<p>
+Классический борщ по домашнему рецепту
+со сметаной и зеленью.
+</p>
+
+<ul class="dish-list">
+<li>Говядина</li>
+<li>Свекла</li>
+<li>Картофель</li>
+<li>Капуста</li>
+<li>Сметана</li>
+</ul>
+
+<p>Вес: 350 г</p>
+
+<div class="price">65 000 VND</div>
+
+</div>
+</div>
+
+
+<!-- БЛЮДО 3 -->
+
+<div class="dish-card">
+
+<img src="Images/pelmeni.jpg" alt="Пельмени">
+
+<div class="info">
+
+<h3>Домашние пельмени</h3>
+
+<p>
+Ручная лепка, сочная начинка,
+подаются со сметаной.
+</p>
+
+<ul class="dish-list">
+<li>Говядина</li>
+<li>Свинина</li>
+<li>Лук</li>
+<li>Тесто</li>
+<li>Сметана</li>
+</ul>
+
+<p>Вес: 300 г</p>
+
+<div class="price">75 000 VND</div>
+
+</div>
+</div>
+
+
+</div>
 </section>
-
-<section id="contact">
-
-<h2>Контакты</h2>
-
-<button onclick="window.open('https://maps.app.goo.gl/AqrXsXDzBmLCGXov6')">
-Маршрут
-</button>
-
-<br><br>
-
-<iframe
-src="https://www.google.com/maps?q=20%20Nguyen%20Hien%20Nha%20Trang&output=embed">
-</iframe>
-
-</section>
-
-</body>
-</html>
