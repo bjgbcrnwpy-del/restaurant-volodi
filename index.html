@@ -2,22 +2,29 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>Ресторан «У Володи»</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Ресторан «У Володи» | Nha Trang</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+/* RESET */
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Montserrat',sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
+html{scroll-behavior:smooth;}
+
 body{
-background:linear-gradient(135deg,#064e3b,#0f766e);
+background:linear-gradient(135deg,#052e22,#064e3b,#022c22);
 color:#fff;
+overflow-x:hidden;
 }
 
 /* HEADER */
@@ -26,185 +33,282 @@ header{
 position:fixed;
 top:0;
 width:100%;
-background:rgba(0,0,0,.7);
-backdrop-filter:blur(10px);
-padding:15px 50px;
+padding:15px 40px;
+background:rgba(0,0,0,.6);
+backdrop-filter:blur(15px);
 display:flex;
 justify-content:space-between;
 align-items:center;
 z-index:1000;
+border-bottom:1px solid rgba(255,255,255,.1);
 }
 
 .logo{
-font-size:22px;
+font-size:24px;
 font-weight:700;
-color:#7cff9f;
+color:#9dffb0;
 }
 
 nav a{
-margin-left:25px;
 color:#fff;
+margin:0 18px;
 text-decoration:none;
 font-weight:500;
+position:relative;
 }
 
-nav a:hover{
-color:#7cff9f;
+nav a::after{
+content:"";
+position:absolute;
+bottom:-5px;
+left:0;
+width:0;
+height:2px;
+background:#9dffb0;
+transition:.3s;
+}
+
+nav a:hover::after{width:100%;}
+
+.lang button{
+background:rgba(255,255,255,.1);
+border:1px solid rgba(255,255,255,.3);
+color:#fff;
+margin-left:6px;
+padding:6px 10px;
+border-radius:6px;
+cursor:pointer;
+transition:.3s;
+}
+
+.lang button:hover{
+background:#9dffb0;
+color:#000;
 }
 
 /* HERO */
 
 .hero{
 min-height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+url("Images/photo1.jpeg") center/cover;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-background:
-linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.8)),
-url("photo1.jpeg") center/cover;
-padding:120px 20px;
+padding:20px;
+}
+
+.hero-box{
+background:rgba(0,0,0,.5);
+padding:50px 40px;
+border-radius:25px;
+backdrop-filter:blur(20px);
+box-shadow:0 0 50px rgba(0,0,0,.7);
+animation:fadeIn 1.5s;
 }
 
 .hero h1{
-font-size:48px;
+font-size:52px;
 margin-bottom:15px;
+color:#9dffb0;
 }
 
 .hero p{
-font-size:18px;
+font-size:20px;
+margin-bottom:25px;
 opacity:.9;
-margin-bottom:30px;
 }
+
+/* BUTTONS */
 
 .btn{
 padding:14px 28px;
 border-radius:30px;
-border:none;
-font-size:15px;
-cursor:pointer;
-transition:.3s;
+text-decoration:none;
+font-weight:600;
 margin:5px;
+display:inline-block;
+transition:.3s;
 }
 
 .btn-main{
-background:#22c55e;
+background:linear-gradient(135deg,#7cff9f,#22c55e);
 color:#000;
 }
 
 .btn-main:hover{
-background:#4ade80;
+transform:translateY(-3px);
+box-shadow:0 10px 30px rgba(120,255,170,.6);
 }
 
 .btn-outline{
-background:transparent;
-border:2px solid #7cff9f;
-color:#7cff9f;
+border:2px solid #9dffb0;
+color:#9dffb0;
 }
 
 .btn-outline:hover{
-background:#7cff9f;
+background:#9dffb0;
 color:#000;
 }
 
 /* SECTIONS */
 
 section{
-padding:80px 8%;
+padding:100px 8%;
+max-width:1300px;
+margin:auto;
 }
 
 h2{
 text-align:center;
-font-size:34px;
+font-size:40px;
 margin-bottom:50px;
 color:#9dffb0;
+}
+
+/* ABOUT */
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about-box{
+background:rgba(0,0,0,.45);
+padding:35px;
+border-radius:20px;
+backdrop-filter:blur(15px);
+}
+
+.about img{
+width:100%;
+border-radius:20px;
 }
 
 /* MENU */
 
 .menu-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:35px;
 }
 
-.dish{
-background:rgba(0,0,0,.4);
-border-radius:20px;
+.dish-card{
+background:rgba(0,0,0,.45);
+border-radius:25px;
 overflow:hidden;
-box-shadow:0 0 25px rgba(0,0,0,.5);
+box-shadow:0 0 30px rgba(0,0,0,.6);
 transition:.4s;
 }
 
-.dish:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 40px rgba(100,255,170,.5);
+.dish-card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 20px 50px rgba(120,255,170,.4);
 }
 
-.dish img{
+.dish-card img{
 width:100%;
-height:200px;
+height:220px;
 object-fit:cover;
 }
 
-.dish h3{
-padding:15px 15px 5px;
-color:#7cff9f;
+.dish-card .info{
+padding:22px;
 }
 
-.dish p{
-padding:0 15px;
+.dish-card h3{
+color:#9dffb0;
+margin-bottom:8px;
+}
+
+.dish-card p{
 font-size:14px;
 opacity:.9;
+line-height:1.5;
+margin-bottom:10px;
 }
 
-.dish span{
-display:block;
-padding:15px;
+.dish-card span{
 font-weight:700;
-color:#9dffb0;
+color:#7cff9f;
+font-size:18px;
 }
 
 /* REVIEWS */
 
 .reviews{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
+background:rgba(0,0,0,.45);
+padding:45px;
+border-radius:25px;
+text-align:center;
 }
 
 .review{
-background:rgba(0,0,0,.4);
-padding:25px;
+background:rgba(255,255,255,.05);
+padding:22px;
 border-radius:15px;
-}
-
-.review b{
-color:#7cff9f;
+margin:15px auto;
+max-width:650px;
 }
 
 /* CONTACT */
 
-.contact{
+.contact-box{
+background:rgba(0,0,0,.45);
+padding:40px;
+border-radius:25px;
 text-align:center;
 }
 
 iframe{
 width:100%;
-max-width:700px;
-height:350px;
+height:330px;
 border:0;
 border-radius:15px;
-margin-top:20px;
+margin-top:25px;
 }
 
 /* FOOTER */
 
 footer{
-background:#000;
-text-align:center;
+background:#021b15;
 padding:25px;
-opacity:.8;
+text-align:center;
+opacity:.7;
+}
+
+/* ANIM */
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(40px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.about{
+grid-template-columns:1fr;
+}
+
+.hero h1{font-size:36px;}
+
 }
 
 </style>
@@ -213,34 +317,64 @@ opacity:.8;
 <body>
 
 <header>
-<div class="logo">🍽 У Володи</div>
+
+<div class="logo">🌿 У Володи</div>
 
 <nav>
 <a href="#home">Главная</a>
+<a href="#about">О нас</a>
 <a href="#menu">Меню</a>
 <a href="#reviews">Отзывы</a>
 <a href="#contact">Контакты</a>
 </nav>
+
+<div class="lang">
+<button onclick="setLang('ru')">RU</button>
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('vi')">VI</button>
+</div>
+
 </header>
 
 <!-- HERO -->
 
 <section class="hero" id="home">
 
-<div>
-<h1>Ресторан «У Володи»</h1>
+<div class="hero-box">
 
-<p>Домашняя кухня в Нячанге — вкусно, честно и с душой</p>
+<h1 id="title">Ресторан «У Володи»</h1>
 
-<button class="btn btn-main"
-onclick="window.open('https://t.me/NhaTrangFoodBot')">
-Заказать в Telegram
-</button>
+<p id="subtitle">Домашняя кухня в Нячанге — вкусно и с душой</p>
 
-<button class="btn btn-outline"
-onclick="document.getElementById('menu').scrollIntoView()">
-Меню
-</button>
+<a href="https://t.me/NhaTrangFoodBot"
+class="btn btn-main"
+target="_blank"
+id="orderBtn">Заказать</a>
+
+<a href="https://maps.app.goo.gl/AqrXsXDzBmLCGXov6"
+class="btn btn-outline"
+target="_blank">Маршрут</a>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="reveal">
+
+<h2 id="aboutTitle">О нас</h2>
+
+<div class="about">
+
+<div class="about-box" id="aboutText">
+
+Мы готовим для гостей так же, как для своей семьи — честно,
+вкусно и с любовью. Только свежие продукты и большие порции.
+
+</div>
+
+<img src="Images/photo2.jpeg">
 
 </div>
 
@@ -248,45 +382,55 @@ onclick="document.getElementById('menu').scrollIntoView()">
 
 <!-- MENU -->
 
-<section id="menu">
+<section id="menu" class="reveal">
 
-<h2>Наше меню</h2>
+<h2 id="menuTitle">Наше меню</h2>
 
 <div class="menu-grid">
 
-<div class="dish">
-<img src="photo1.jpeg">
-<h3>Стейк с картофелем</h3>
-<p>Сочный говяжий стейк с хрустящим гарниром</p>
-<span>180 000 ₫</span>
+<div class="dish-card">
+<img src="Images/photo1.jpeg">
+<div class="info">
+<h3>Жареная говяжья вырезка</h3>
+<p>Нежные куски говяжьей вырезки с чесноком и специями. Подаётся с рисом или картофелем фри.</p>
+<span>90 000 ₫</span>
+</div>
 </div>
 
-<div class="dish">
-<img src="photo2.jpeg">
-<h3>Курица терияки</h3>
-<p>Филе в соусе терияки с рисом</p>
-<span>140 000 ₫</span>
+<div class="dish-card">
+<img src="Images/photo2.jpeg">
+<div class="info">
+<h3>Курица с овощами</h3>
+<p>Обжаренное куриное филе с сезонными овощами и фирменным соусом.</p>
+<span>75 000 ₫</span>
+</div>
 </div>
 
-<div class="dish">
-<img src="photo3.jpeg">
-<h3>Том Ям</h3>
-<p>Острый суп с креветками</p>
-<span>120 000 ₫</span>
+<div class="dish-card">
+<img src="Images/photo3.jpeg">
+<div class="info">
+<h3>Домашний борщ</h3>
+<p>Классический борщ со сметаной и свежей зеленью.</p>
+<span>60 000 ₫</span>
+</div>
 </div>
 
-<div class="dish">
-<img src="photo4.jpeg">
-<h3>Паста Болоньезе</h3>
-<p>Итальянская паста с соусом</p>
-<span>130 000 ₫</span>
+<div class="dish-card">
+<img src="Images/photo4.jpeg">
+<div class="info">
+<h3>Пельмени ручной лепки</h3>
+<p>Домашние пельмени с сочной мясной начинкой.</p>
+<span>70 000 ₫</span>
+</div>
 </div>
 
-<div class="dish">
-<img src="photo5.jpeg">
-<h3>Рыба гриль</h3>
-<p>Свежая рыба с лимоном</p>
-<span>160 000 ₫</span>
+<div class="dish-card">
+<img src="Images/photo5.jpeg">
+<div class="info">
+<h3>Рыба на гриле</h3>
+<p>Свежая рыба с лимоном, травами и соусом тар-тар.</p>
+<span>110 000 ₫</span>
+</div>
 </div>
 
 </div>
@@ -295,65 +439,107 @@ onclick="document.getElementById('menu').scrollIntoView()">
 
 <!-- REVIEWS -->
 
-<section id="reviews">
+<section id="reviews" class="reveal">
 
 <h2>Отзывы гостей</h2>
 
 <div class="reviews">
 
-<div class="review">
-<b>Анна</b>
-<p>Очень вкусно, по-домашнему ❤️</p>
-⭐⭐⭐⭐⭐
-</div>
+<div class="review">⭐⭐⭐⭐⭐ Очень вкусно и уютно!</div>
+<div class="review">⭐⭐⭐⭐⭐ Лучший ресторан в районе</div>
+<div class="review">⭐⭐⭐⭐⭐ Большие порции и честные цены</div>
 
-<div class="review">
-<b>Сергей</b>
-<p>Лучшее место в Нячанге!</p>
-⭐⭐⭐⭐⭐
-</div>
-
-<div class="review">
-<b>David</b>
-<p>Great food and service!</p>
-⭐⭐⭐⭐⭐
-</div>
+<a href="https://maps.app.goo.gl/AqrXsXDzBmLCGXov6"
+class="btn btn-main"
+target="_blank">Оставить отзыв</a>
 
 </div>
-
-<a class="btn btn-outline"
-style="margin-top:30px;display:inline-block"
-href="https://maps.app.goo.gl/AqrXsXDzBmLCGXov6"
-target="_blank">
-Оставить отзыв в Google
-</a>
 
 </section>
 
 <!-- CONTACT -->
 
-<section id="contact" class="contact">
+<section id="contact" class="reveal">
 
 <h2>Как нас найти</h2>
 
-<p>20 Nguyen Hien, Nha Trang</p>
+<div class="contact-box">
 
-<button class="btn btn-main"
-onclick="window.open('https://maps.app.goo.gl/AqrXsXDzBmLCGXov6')">
-Построить маршрут
-</button>
+<p>📍 20 Nguyễn Hiền, Vĩnh Hải, Nha Trang</p>
 
-<br>
+<a href="https://maps.app.goo.gl/AqrXsXDzBmLCGXov6"
+class="btn btn-outline"
+target="_blank">Проложить маршрут</a>
 
 <iframe
 src="https://www.google.com/maps?q=20%20Nguyen%20Hien%20Nha%20Trang&output=embed">
 </iframe>
 
+</div>
+
 </section>
 
 <footer>
-© 2026 Ресторан «У Володи»
+© 2026 Ресторан «У Володи» — Nha Trang
 </footer>
+
+<script>
+
+/* LANGUAGE */
+
+const data={
+
+ru:{
+title:"Ресторан «У Володи»",
+subtitle:"Домашняя кухня в Нячанге — вкусно и с душой",
+order:"Заказать",
+about:"О нас",
+menu:"Наше меню"
+},
+
+en:{
+title:"Volodi Restaurant",
+subtitle:"Homestyle food in Nha Trang",
+order:"Order",
+about:"About us",
+menu:"Our Menu"
+},
+
+vi:{
+title:"Nhà hàng Volodi",
+subtitle:"Ẩm thực gia đình tại Nha Trang",
+order:"Đặt món",
+about:"Về chúng tôi",
+menu:"Thực đơn"
+}
+
+};
+
+function setLang(l){
+
+document.getElementById("title").innerText=data[l].title;
+document.getElementById("subtitle").innerText=data[l].subtitle;
+document.getElementById("orderBtn").innerText=data[l].order;
+document.getElementById("aboutTitle").innerText=data[l].about;
+document.getElementById("menuTitle").innerText=data[l].menu;
+
+}
+
+/* SCROLL */
+
+window.addEventListener("scroll",()=>{
+
+document.querySelectorAll(".reveal").forEach(el=>{
+
+if(el.getBoundingClientRect().top < window.innerHeight-100){
+el.classList.add("active");
+}
+
+});
+
+});
+
+</script>
 
 </body>
 </html>
