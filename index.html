@@ -1,183 +1,167 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Ресторан «У Володи» — Нячанг</title>
+<meta charset="UTF-8">
+<title>Ресторан «У Володи» — Нячанг</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
+<style>
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+/* ===== RESET ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
 }
 
-/* Header */
+/* ===== HEADER ===== */
+header{
+  background:#111;
+  color:white;
+  padding:15px 40px;
 
-header {
-  background: #111;
-  color: white;
-  padding: 15px 40px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-.logo {
-  font-size: 22px;
-  font-weight: bold;
+.logo{
+  font-size:22px;
+  font-weight:bold;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 12px;
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 12px;
 }
 
-nav a:hover {
-  color: orange;
+nav a:hover{
+  color:orange;
 }
 
-.lang button {
-  background: transparent;
-  border: 1px solid white;
-  color: white;
-  padding: 5px 10px;
-  margin-left: 5px;
-  cursor: pointer;
+.lang button{
+  background:transparent;
+  border:1px solid white;
+  color:white;
+  padding:5px 10px;
+  margin-left:5px;
+  cursor:pointer;
 }
 
-.lang button:hover {
-  background: orange;
-  color: black;
+.lang button:hover{
+  background:orange;
+  color:black;
 }
 
-/* Hero */
-
-.hero {
-  height: 100vh;
+/* ===== HERO ===== */
+.hero{
+  height:100vh;
 
   background:
   linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
   url("Images/photo_2026-02-03_17-01-57.jpeg");
 
-  background-size: cover;
-  background-position: center;
+  background-size:cover;
+  background-position:center;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
 
-  text-align: center;
-  color: white;
-  padding: 20px;
+  text-align:center;
+  color:white;
+  padding:20px;
 }
 
-.hero h1 {
-  font-size: 60px;
-  margin-bottom: 20px;
+.hero h1{
+  font-size:60px;
+  margin-bottom:20px;
 }
 
-.hero p {
-  font-size: 22px;
-  margin-bottom: 30px;
-  max-width: 700px;
+.hero p{
+  font-size:22px;
+  max-width:700px;
+  margin-bottom:30px;
 }
 
-.hero-buttons {
-  display: flex;
-  gap: 15px;
+.hero-buttons{
+  display:flex;
+  gap:15px;
 }
 
-.hero-buttons a {
-  padding: 12px 25px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 16px;
+.hero-buttons a{
+  padding:12px 25px;
+  border-radius:6px;
+  text-decoration:none;
+  font-size:16px;
 }
 
-.btn-main {
-  background: orange;
-  color: black;
+.btn-main{
+  background:orange;
+  color:black;
 }
 
-.btn-second {
-  border: 2px solid white;
-  color: white;
+.btn-second{
+  border:2px solid white;
+  color:white;
 }
 
-/* About */
-
-.about {
-  background: #111;
-  color: white;
-  padding: 70px 15%;
+/* ===== ABOUT ===== */
+.about{
+  background:#111;
+  color:white;
+  padding:70px 15%;
 }
 
-.about h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+.about h2{
+  font-size:36px;
+  margin-bottom:20px;
 }
 
-.about p {
-  line-height: 1.7;
-  margin-bottom: 15px;
+.about p{
+  line-height:1.7;
+  margin-bottom:15px;
 }
 
-/* Reviews */
-
-.reviews {
-  background: #f5f5f5;
-  padding: 70px 10%;
-  text-align: center;
+/* ===== MAP ===== */
+.map{
+  padding:70px 10%;
+  background:#f5f5f5;
+  text-align:center;
 }
 
-.reviews h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
+.map h2{
+  font-size:36px;
+  margin-bottom:25px;
 }
 
-.review-box {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 20px;
+.map iframe{
+  width:100%;
+  height:400px;
+  border:0;
+  border-radius:10px;
 }
 
-.review {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+/* ===== FOOTER ===== */
+footer{
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:25px;
+  font-size:14px;
 }
 
-.review h4 {
-  margin-bottom: 10px;
-  color: orange;
-}
-
-/* Footer */
-
-footer {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-}
-
-  </style>
+</style>
 </head>
 
 <body>
 
-<!-- Header -->
 
+<!-- HEADER -->
 <header>
 
   <div class="logo">🍽 У Володи</div>
@@ -185,161 +169,5 @@ footer {
   <nav>
     <a href="#home">Главная</a>
     <a href="#about">О нас</a>
-    <a href="#reviews">Отзывы</a>
-    <a href="#contact">Контакты</a>
-  </nav>
-
-  <div class="lang">
-    <button onclick="setLang('ru')">RU</button>
-    <button onclick="setLang('en')">EN</button>
-    <button onclick="setLang('vi')">VI</button>
-  </div>
-
-</header>
-
-
-<!-- Hero -->
-
-<section class="hero" id="home">
-
-  <h1 id="title">Ресторан «У Володи»</h1>
-
-  <p id="subtitle">
-    Домашняя кухня на севере Нячанга — вкусно, честно и с душой
-  </p>
-
-  <div class="hero-buttons">
-
-    <a href="https://t.me/NhaTrangFoodBot" class="btn-main" id="order">
-      Заказать в Telegram
-    </a>
-
-    <a href="#about" class="btn-second" id="menu">
-      Подробнее
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- About -->
-
-<section class="about" id="about">
-
-  <h2 id="aboutTitle">О ресторане</h2>
-
-  <p id="aboutText1">
-    «У Володи» — это место, где готовят по-домашнему, как для своей семьи.
-    Мы используем только свежие продукты и проверенные рецепты.
-  </p>
-
-  <p id="aboutText2">
-    С 2017 года мы радуем гостей Нячанга настоящей русской и европейской кухней.
-    У нас большие порции, честные цены и тёплая атмосфера.
-  </p>
-
-</section>
-
-
-<!-- Reviews -->
-
-<section class="reviews" id="reviews">
-
-  <h2 id="reviewsTitle">Отзывы гостей</h2>
-
-  <div class="review-box">
-
-    <div class="review">
-      <h4>Алексей</h4>
-      <p>Лучший борщ в Нячанге! Очень вкусно 👍</p>
-    </div>
-
-    <div class="review">
-      <h4>Марина</h4>
-      <p>Заказываем постоянно. Всё всегда свежее ❤️</p>
-    </div>
-
-    <div class="review">
-      <h4>Дмитрий</h4>
-      <p>Отличное место, большие порции и цены норм!</p>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- Footer -->
-
-<footer id="contact">
-
-  📍 Нячанг, Вьетнам  
-  <br>
-  📱 Telegram: @NhaTrangFoodBot  
-  <br><br>
-  © 2017–2026 Ресторан «У Володи»
-
-</footer>
-
-
-<!-- Language Script -->
-
-<script>
-
-const data = {
-
-ru: {
-title: "Ресторан «У Володи»",
-subtitle: "Домашняя кухня на севере Нячанга — вкусно, честно и с душой",
-order: "Заказать в Telegram",
-menu: "Подробнее",
-aboutTitle: "О ресторане",
-aboutText1: "«У Володи» — это место, где готовят по-домашнему, как для своей семьи.",
-aboutText2: "С 2017 года мы радуем гостей Нячанга настоящей кухней.",
-reviewsTitle: "Отзывы гостей"
-},
-
-en: {
-title: "Volodya Restaurant",
-subtitle: "Home-style food in Nha Trang — tasty and honest",
-order: "Order via Telegram",
-menu: "More info",
-aboutTitle: "About us",
-aboutText1: "We cook like for our family using fresh ingredients.",
-aboutText2: "Since 2017 we serve real home cuisine.",
-reviewsTitle: "Reviews"
-},
-
-vi: {
-title: "Nhà hàng Volodya",
-subtitle: "Ẩm thực gia đình tại Nha Trang",
-order: "Đặt qua Telegram",
-menu: "Chi tiết",
-aboutTitle: "Giới thiệu",
-aboutText1: "Chúng tôi nấu ăn như cho gia đình mình.",
-aboutText2: "Phục vụ từ năm 2017.",
-reviewsTitle: "Đánh giá"
-}
-
-};
-
-
-function setLang(lang) {
-
-  document.getElementById("title").innerText = data[lang].title;
-  document.getElementById("subtitle").innerText = data[lang].subtitle;
-  document.getElementById("order").innerText = data[lang].order;
-  document.getElementById("menu").innerText = data[lang].menu;
-  document.getElementById("aboutTitle").innerText = data[lang].aboutTitle;
-  document.getElementById("aboutText1").innerText = data[lang].aboutText1;
-  document.getElementById("aboutText2").innerText = data[lang].aboutText2;
-  document.getElementById("reviewsTitle").innerText = data[lang].reviewsTitle;
-
-}
-
-</script>
-
-
-</body>
-</html>
+    <a href="#map">Карта</a>
+    <a href="#conta
