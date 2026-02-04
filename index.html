@@ -1,50 +1,49 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Ресторан у Володи — Нячанг</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="style.css">
-
+<meta charset="UTF-8">
+<title>Ресторан у Володи — Нячанг</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-  <div class="logo">🍽 У Володи</div>
-
-  <nav>
-    <a href="#home">Главная</a>
-    <a href="#about">О нас</a>
-    <a href="#menu">Меню</a>
-    <a href="#contact">Контакты</a>
-  </nav>
-</header>
-
-
-<!-- ЯЗЫКИ -->
+<!-- LANG -->
 <div class="lang-switch">
-  <button onclick="setLang('ru')">RU</button>
-  <button onclick="setLang('en')">EN</button>
-  <button onclick="setLang('vi')">VI</button>
+<button onclick="setLang('ru')">RU</button>
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('vi')">VI</button>
 </div>
+
+
+<header>
+<div class="logo" data-lang="logo"></div>
+
+<nav>
+<a href="#home" data-lang="nav_home"></a>
+<a href="#about" data-lang="nav_about"></a>
+<a href="#menu" data-lang="nav_menu"></a>
+<a href="#contact" data-lang="nav_contact"></a>
+</nav>
+</header>
 
 
 <!-- HERO -->
 <section class="hero" id="home">
 
-  <h1>Ресторан «У Володи»</h1>
+<h1 data-lang="hero_title"></h1>
+<p data-lang="hero_subtitle"></p>
 
-  <p>Домашняя кухня на севере Нячанга</p>
+<div class="hero-buttons">
+<a href="https://t.me/NhaTrangFoodBot"
+class="btn main"
+data-lang="btn_order"></a>
 
-  <div class="hero-buttons">
-    <a href="https://t.me/NhaTrangFoodBot" class="btn main">
-      Заказать в Telegram
-    </a>
-    <a href="#menu" class="btn">
-      Меню
-    </a>
-  </div>
+<a href="#menu"
+class="btn"
+data-lang="btn_menu"></a>
+</div>
 
 </section>
 
@@ -52,24 +51,103 @@
 <!-- ABOUT -->
 <section class="about" id="about">
 
-  <div class="container">
+<div class="container">
 
-    <h2>О ресторане «У Володи»</h2>
+<h2 data-lang="about_title"></h2>
 
-    <p>
-      Ресторан «У Володи» — это место, где вкусно, по-домашнему и с душой.
-      Мы готовим для вас так, как готовим для своей семьи — из свежих продуктов,
-      без лишней химии и с любовью к каждому блюду.
-    </p>
+<p data-lang="about_text1"></p>
+<p data-lang="about_text2"></p>
 
-    <p>
-      С 2017 года мы радуем жителей и гостей Нячанга настоящей домашней кухней,
-      в которой сочетаются традиционные рецепты и современные вкусы.
-    </p>
+<h3 data-lang="about_philosophy"></h3>
 
-    <h3>Наша философия</h3>
+<ul>
+<li data-lang="ph1"></li>
+<li data-lang="ph2"></li>
+<li data-lang="ph3"></li>
+<li data-lang="ph4"></li>
+</ul>
 
-    <ul>
-      <li>✔ Только свежие продукты</li>
-      <li>✔ Честные порции</li>
-      <li>✔ Домашние рецепты</li>
+<h3 data-lang="about_why"></h3>
+
+<ul>
+<li data-lang="why1"></li>
+<li data-lang="why2"></li>
+<li data-lang="why3"></li>
+<li data-lang="why4"></li>
+</ul>
+
+</div>
+</section>
+
+
+<!-- MENU -->
+<section class="menu" id="menu">
+
+<h2 data-lang="menu_title"></h2>
+
+<div class="menu-grid">
+
+<div class="card">
+<img src="photo1.jpeg">
+<h3 data-lang="m1"></h3>
+<p data-lang="m1d"></p>
+<span>90 000 ₫</span>
+</div>
+
+<div class="card">
+<img src="photo2.jpeg">
+<h3 data-lang="m2"></h3>
+<p data-lang="m2d"></p>
+<span>120 000 ₫</span>
+</div>
+
+<div class="card">
+<img src="photo3.jpeg">
+<h3 data-lang="m3"></h3>
+<p data-lang="m3d"></p>
+<span>150 000 ₫</span>
+</div>
+
+<div class="card">
+<img src="photo4.jpeg">
+<h3 data-lang="m4"></h3>
+<p data-lang="m4d"></p>
+<span>180 000 ₫</span>
+</div>
+
+<div class="card">
+<img src="photo5.jpeg">
+<h3 data-lang="m5"></h3>
+<p data-lang="m5d"></p>
+<span>140 000 ₫</span>
+</div>
+
+</div>
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+<h2 data-lang="contact_title"></h2>
+
+<p data-lang="contact_addr"></p>
+
+<a target="_blank"
+class="btn main"
+href="https://maps.google.com/?q=20+Nguyễn+Hiền+Nha+Trang"
+data-lang="btn_route"></a>
+
+</section>
+
+
+<footer data-lang="footer"></footer>
+
+
+<script>
+
+const langData = {
+
+ru: {
+
+logo: "🍽 У Во
