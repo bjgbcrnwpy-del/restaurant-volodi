@@ -2,47 +2,48 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>Ресторан у Володи — Нячанг</title>
+<title>Ресторан У Володи — Нячанг</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-</head>
 
+<link rel="stylesheet" href="style.css">
+
+</head>
 <body>
 
-<!-- LANG -->
-<div class="lang-switch">
-<button onclick="setLang('ru')">RU</button>
-<button onclick="setLang('en')">EN</button>
-<button onclick="setLang('vi')">VI</button>
-</div>
-
-
 <header>
-<div class="logo" data-lang="logo"></div>
+  <div class="logo">🍽 У Володи</div>
 
-<nav>
-<a href="#home" data-lang="nav_home"></a>
-<a href="#about" data-lang="nav_about"></a>
-<a href="#menu" data-lang="nav_menu"></a>
-<a href="#contact" data-lang="nav_contact"></a>
-</nav>
+  <nav>
+    <a href="#home" data-key="navHome">Главная</a>
+    <a href="#about" data-key="navAbout">О нас</a>
+    <a href="#menu" data-key="navMenu">Меню</a>
+    <a href="#reviews" data-key="navReviews">Отзывы</a>
+    <a href="#contact" data-key="navContact">Контакты</a>
+  </nav>
+
+  <div class="lang">
+    <button onclick="setLang('ru')">RU</button>
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('vi')">VI</button>
+  </div>
 </header>
 
 
 <!-- HERO -->
 <section class="hero" id="home">
 
-<h1 data-lang="hero_title"></h1>
-<p data-lang="hero_subtitle"></p>
+<h1 data-key="heroTitle">Ресторан «У Володи»</h1>
+
+<p data-key="heroSubtitle">Домашняя кухня на севере Нячанга</p>
 
 <div class="hero-buttons">
-<a href="https://t.me/NhaTrangFoodBot"
-class="btn main"
-data-lang="btn_order"></a>
+  <a href="https://t.me/NhaTrangFoodBot" class="btn main" data-key="orderBtn">
+    Заказать в Telegram
+  </a>
 
-<a href="#menu"
-class="btn"
-data-lang="btn_menu"></a>
+  <a href="#menu" class="btn" data-key="menuBtn">
+    Меню
+  </a>
 </div>
 
 </section>
@@ -51,103 +52,272 @@ data-lang="btn_menu"></a>
 <!-- ABOUT -->
 <section class="about" id="about">
 
-<div class="container">
+<h2 data-key="aboutTitle">О ресторане</h2>
 
-<h2 data-lang="about_title"></h2>
+<p data-key="aboutText1">
+Мы готовим с любовью и заботой, как для своей семьи.
+</p>
 
-<p data-lang="about_text1"></p>
-<p data-lang="about_text2"></p>
-
-<h3 data-lang="about_philosophy"></h3>
-
-<ul>
-<li data-lang="ph1"></li>
-<li data-lang="ph2"></li>
-<li data-lang="ph3"></li>
-<li data-lang="ph4"></li>
-</ul>
-
-<h3 data-lang="about_why"></h3>
+<p data-key="aboutText2">
+С 2017 года мы радуем гостей настоящей домашней кухней.
+</p>
 
 <ul>
-<li data-lang="why1"></li>
-<li data-lang="why2"></li>
-<li data-lang="why3"></li>
-<li data-lang="why4"></li>
+  <li data-key="about1">✔ Свежие продукты</li>
+  <li data-key="about2">✔ Большие порции</li>
+  <li data-key="about3">✔ Честные цены</li>
+  <li data-key="about4">✔ Русскоязычный хозяин</li>
 </ul>
 
-</div>
 </section>
 
 
 <!-- MENU -->
 <section class="menu" id="menu">
 
-<h2 data-lang="menu_title"></h2>
+<h2 data-key="menuTitle">Наше меню</h2>
 
 <div class="menu-grid">
 
 <div class="card">
 <img src="photo1.jpeg">
-<h3 data-lang="m1"></h3>
-<p data-lang="m1d"></p>
-<span>90 000 ₫</span>
+<h3 data-key="dish1">Жареная говядина</h3>
+<p>90 000 ₫</p>
 </div>
 
 <div class="card">
 <img src="photo2.jpeg">
-<h3 data-lang="m2"></h3>
-<p data-lang="m2d"></p>
-<span>120 000 ₫</span>
+<h3 data-key="dish2">Кальмар в соусе</h3>
+<p>120 000 ₫</p>
 </div>
 
 <div class="card">
 <img src="photo3.jpeg">
-<h3 data-lang="m3"></h3>
-<p data-lang="m3d"></p>
-<span>150 000 ₫</span>
+<h3 data-key="dish3">Рыба на гриле</h3>
+<p>150 000 ₫</p>
 </div>
 
 <div class="card">
 <img src="photo4.jpeg">
-<h3 data-lang="m4"></h3>
-<p data-lang="m4d"></p>
-<span>180 000 ₫</span>
+<h3 data-key="dish4">Лосось с рисом</h3>
+<p>140 000 ₫</p>
 </div>
 
 <div class="card">
 <img src="photo5.jpeg">
-<h3 data-lang="m5"></h3>
-<p data-lang="m5d"></p>
-<span>140 000 ₫</span>
+<h3 data-key="dish5">Паста с морепродуктами</h3>
+<p>130 000 ₫</p>
 </div>
 
 </div>
+
+</section>
+
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+
+<h2 data-key="reviewsTitle">Отзывы гостей</h2>
+
+<div class="review">
+
+<p data-key="rev1">
+⭐️⭐️⭐️⭐️⭐️ Очень вкусно! Лучший ресторан в Нячанге.
+</p>
+<span>— Алексей</span>
+
+</div>
+
+<div class="review">
+
+<p data-key="rev2">
+Отличные порции и дружелюбный хозяин!
+</p>
+<span>— Марина</span>
+
+</div>
+
+<div class="review">
+
+<p data-key="rev3">
+Всегда заходим сюда, когда приезжаем во Вьетнам.
+</p>
+<span>— Дмитрий</span>
+
+</div>
+
 </section>
 
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
 
-<h2 data-lang="contact_title"></h2>
+<h2 data-key="contactTitle">Как нас найти</h2>
 
-<p data-lang="contact_addr"></p>
+<p data-key="address">
+20 Nguyễn Hiền, Vĩnh Hải, Nha Trang
+</p>
 
-<a target="_blank"
-class="btn main"
-href="https://maps.google.com/?q=20+Nguyễn+Hiền+Nha+Trang"
-data-lang="btn_route"></a>
+<a href="https://maps.google.com/?q=20+Nguyễn+Hiền+Nha+Trang" target="_blank" class="btn main" data-key="mapBtn">
+Построить маршрут
+</a>
 
 </section>
 
 
-<footer data-lang="footer"></footer>
+<footer>
+<p>© 2026 Ресторан «У Володи»</p>
+</footer>
 
 
+
+<!-- LANG SCRIPT -->
 <script>
 
-const langData = {
+const texts = {
 
 ru: {
+navHome:"Главная",
+navAbout:"О нас",
+navMenu:"Меню",
+navReviews:"Отзывы",
+navContact:"Контакты",
 
-logo: "🍽 У Во
+heroTitle:"Ресторан «У Володи»",
+heroSubtitle:"Домашняя кухня на севере Нячанга",
+
+orderBtn:"Заказать в Telegram",
+menuBtn:"Меню",
+
+aboutTitle:"О ресторане",
+aboutText1:"Мы готовим с любовью и заботой, как для своей семьи.",
+aboutText2:"С 2017 года мы радуем гостей настоящей домашней кухней.",
+
+about1:"✔ Свежие продукты",
+about2:"✔ Большие порции",
+about3:"✔ Честные цены",
+about4:"✔ Русскоязычный хозяин",
+
+menuTitle:"Наше меню",
+
+dish1:"Жареная говядина",
+dish2:"Кальмар в соусе",
+dish3:"Рыба на гриле",
+dish4:"Лосось с рисом",
+dish5:"Паста с морепродуктами",
+
+reviewsTitle:"Отзывы гостей",
+
+rev1:"⭐️⭐️⭐️⭐️⭐️ Очень вкусно! Лучший ресторан в Нячанге.",
+rev2:"Отличные порции и дружелюбный хозяин!",
+rev3:"Всегда заходим сюда, когда приезжаем во Вьетнам.",
+
+contactTitle:"Как нас найти",
+address:"20 Nguyễn Hiền, Vĩnh Hải, Nha Trang",
+mapBtn:"Построить маршрут"
+},
+
+
+en: {
+navHome:"Home",
+navAbout:"About",
+navMenu:"Menu",
+navReviews:"Reviews",
+navContact:"Contacts",
+
+heroTitle:"Volodi Restaurant",
+heroSubtitle:"Home cuisine in North Nha Trang",
+
+orderBtn:"Order via Telegram",
+menuBtn:"Menu",
+
+aboutTitle:"About Us",
+aboutText1:"We cook with love like for our family.",
+aboutText2:"Since 2017 we serve homemade food.",
+
+about1:"✔ Fresh products",
+about2:"✔ Big portions",
+about3:"✔ Fair prices",
+about4:"✔ Russian owner",
+
+menuTitle:"Our Menu",
+
+dish1:"Fried Beef",
+dish2:"Squid in Sauce",
+dish3:"Grilled Fish",
+dish4:"Salmon with Rice",
+dish5:"Seafood Pasta",
+
+reviewsTitle:"Customer Reviews",
+
+rev1:"⭐️⭐️⭐️⭐️⭐️ Very tasty! Best in Nha Trang.",
+rev2:"Great food and friendly owner!",
+rev3:"Always come here when visiting.",
+
+contactTitle:"Find Us",
+address:"20 Nguyen Hien, Nha Trang",
+mapBtn:"Build Route"
+},
+
+
+vi: {
+navHome:"Trang chủ",
+navAbout:"Giới thiệu",
+navMenu:"Thực đơn",
+navReviews:"Đánh giá",
+navContact:"Liên hệ",
+
+heroTitle:"Nhà hàng Volodi",
+heroSubtitle:"Ẩm thực gia đình tại Bắc Nha Trang",
+
+orderBtn:"Đặt qua Telegram",
+menuBtn:"Thực đơn",
+
+aboutTitle:"Về chúng tôi",
+aboutText1:"Chúng tôi nấu ăn như cho gia đình.",
+aboutText2:"Phục vụ từ năm 2017.",
+
+about1:"✔ Thực phẩm tươi",
+about2:"✔ Phần lớn",
+about3:"✔ Giá hợp lý",
+about4:"✔ Chủ người Nga",
+
+menuTitle:"Thực đơn",
+
+dish1:"Bò chiên",
+dish2:"Mực sốt",
+dish3:"Cá nướng",
+dish4:"Cá hồi cơm",
+dish5:"Mì hải sản",
+
+reviewsTitle:"Đánh giá",
+
+rev1:"⭐️⭐️⭐️⭐️⭐️ Rất ngon!",
+rev2:"Chủ quán thân thiện!",
+rev3:"Luôn quay lại!",
+
+contactTitle:"Địa chỉ",
+address:"20 Nguyễn Hiền, Nha Trang",
+mapBtn:"Chỉ đường"
+}
+
+};
+
+
+function setLang(lang){
+
+document.querySelectorAll("[data-key]").forEach(el=>{
+  const key = el.dataset.key;
+  el.innerText = texts[lang][key];
+});
+
+localStorage.setItem("lang",lang);
+
+}
+
+setLang(localStorage.getItem("lang") || "ru");
+
+</script>
+
+</body>
+</html>
