@@ -259,3 +259,17 @@ padding:80px 5%;
 }
 
 }
+.logo-box{
+    margin-bottom:25px;
+}
+
+.logo-img{
+    width:120px;
+    height:auto;
+    filter:drop-shadow(0 0 15px rgba(157,255,176,.6));
+    transition:.4s;
+}
+
+.logo-img:hover{
+    transform:scale(1.08);
+}
