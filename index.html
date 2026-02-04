@@ -1,44 +1,346 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Restaurant Volodi — Premium</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Volodi</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@300;500;600&display=swap" rel="stylesheet">
 
-    <style>
+<style>
 
-        /* ===== RESET ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* ===== RESET ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg,#0b3d2e,#145a32);
-            color: #fff;
-        }
+/* ===== BODY ===== */
+body{
+    font-family:'Montserrat',sans-serif;
+    background:linear-gradient(135deg,#0c3b2e,#145a32);
+    color:#fff;
+}
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+/* ===== HEADER ===== */
+header{
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    padding:40px 20px;
+    text-align:center;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
 
-        /* ===== HEADER ===== */
+header img{
+    width:120px;
+    margin-bottom:15px;
+}
 
-        header {
-            background: rgba(0,0,0,0.6);
-            padding: 40px 20px;
-            text-align: center;
-            backdrop-filter: blur(6px);
-        }
+header h1{
+    font-family:'Playfair Display',serif;
+    font-size:42px;
+    margin-bottom:10px;
+}
 
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 48px;
-           
+header p{
+    opacity:0.8;
+}
+
+/* ===== BUTTON ===== */
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#d4af37;
+    color:#000;
+    font-weight:600;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#f5d76e;
+    transform:scale(1.05);
+}
+
+/* ===== CONTAINER ===== */
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+/* ===== TITLE ===== */
+.section-title{
+    text-align:center;
+    font-family:'Playfair Display',serif;
+    font-size:36px;
+    margin-bottom:40px;
+}
+
+/* ===== MENU GRID ===== */
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+/* ===== CARD ===== */
+.card{
+    background:rgba(0,0,0,0.6);
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+/* ===== IMAGE ===== */
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+/* ===== CONTENT ===== */
+.card-body{
+    padding:20px;
+}
+
+.card-body h3{
+    font-family:'Playfair Display',serif;
+    margin-bottom:10px;
+}
+
+.card-body p{
+    font-size:14px;
+    opacity:0.9;
+    margin-bottom:10px;
+}
+
+.card-body ul{
+    margin-left:20px;
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.card-body li{
+    margin-bottom:4px;
+}
+
+/* ===== PRICE ===== */
+.price{
+    font-size:18px;
+    font-weight:600;
+    color:#f5d76e;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background:#000;
+    padding:30px;
+    text-align:center;
+    opacity:0.8;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+
+<header>
+
+    <!-- ЛОГО -->
+    <img src="Лого%20Ресторан%20у%20Володи.png" alt="Logo">
+
+    <h1>Restaurant Volodi</h1>
+
+    <p>Премиальная русско-европейская кухня во Вьетнаме</p>
+
+    <a class="btn" href="https://maps.app.goo.gl/AqrXsXDzBmLCGXov6" target="_blank">
+        📍 Проложить маршрут
+    </a>
+
+</header>
+
+
+<!-- ===== MENU ===== -->
+
+<div class="container">
+
+<h2 class="section-title">Наше меню</h2>
+
+<div class="menu-grid">
+
+
+<!-- БЛЮДО 1 -->
+
+<div class="card">
+
+<img src="1.jpeg" alt="Beef">
+
+<div class="card-body">
+
+<h3>Жареная говяжья вырезка (3 шт.)</h3>
+
+<p>
+Нежные куски говяжьей вырезки, обжаренные с чесноком и специями.
+</p>
+
+<ul>
+<li>Говяжья вырезка</li>
+<li>Чеснок</li>
+<li>Сливочное масло</li>
+<li>Соль, перец</li>
+<li>Рис / картофель фри</li>
+</ul>
+
+<p>Вес: 230 г</p>
+
+<div class="price">90 000 VND</div>
+
+</div>
+</div>
+
+
+<!-- БЛЮДО 2 -->
+
+<div class="card">
+
+<img src="photo2.jpeg" alt="Borsh">
+
+<div class="card-body">
+
+<h3>Домашний борщ</h3>
+
+<p>
+Классический борщ по домашнему рецепту со сметаной и зеленью.
+</p>
+
+<ul>
+<li>Говядина</li>
+<li>Свекла</li>
+<li>Картофель</li>
+<li>Капуста</li>
+<li>Сметана</li>
+</ul>
+
+<p>Вес: 350 г</p>
+
+<div class="price">65 000 VND</div>
+
+</div>
+</div>
+
+
+<!-- БЛЮДО 3 -->
+
+<div class="card">
+
+<img src="photo3.jpeg" alt="Pelmeni">
+
+<div class="card-body">
+
+<h3>Домашние пельмени</h3>
+
+<p>
+Ручная лепка, сочная начинка, подаются со сметаной.
+</p>
+
+<ul>
+<li>Говядина</li>
+<li>Свинина</li>
+<li>Лук</li>
+<li>Тесто</li>
+<li>Сметана</li>
+</ul>
+
+<p>Вес: 300 г</p>
+
+<div class="price">70 000 VND</div>
+
+</div>
+</div>
+
+
+<!-- БЛЮДО 4 -->
+
+<div class="card">
+
+<img src="fish sebu.jpeg" alt="Fish">
+
+<div class="card-body">
+
+<h3>Рыба Себу на гриле</h3>
+
+<p>
+Нежная рыба на гриле с травами и лимонным соусом.
+</p>
+
+<ul>
+<li>Филе рыбы</li>
+<li>Лимон</li>
+<li>Специи</li>
+<li>Оливковое масло</li>
+</ul>
+
+<p>Вес: 280 г</p>
+
+<div class="price">85 000 VND</div>
+
+</div>
+</div>
+
+
+<!-- БЛЮДО 5 -->
+
+<div class="card">
+
+<img src="kalmar.jpeg" alt="Calmar">
+
+<div class="card-body">
+
+<h3>Кальмар в чесночном соусе</h3>
+
+<p>
+Обжаренный кальмар в фирменном чесночном соусе.
+</p>
+
+<ul>
+<li>Кальмар</li>
+<li>Чеснок</li>
+<li>Соус</li>
+<li>Зелень</li>
+</ul>
+
+<p>Вес: 260 г</p>
+
+<div class="price">80 000 VND</div>
+
+</div>
+</div>
+
+
+</div>
+</div>
+
+
+<!-- ===== FOOTER ===== -->
+
+<footer>
+
+<p>© 2026 Restaurant Volodi</p>
+<p>Premium Dining Experience</p>
+
+</footer>
+
+
+</body>
+</html>
