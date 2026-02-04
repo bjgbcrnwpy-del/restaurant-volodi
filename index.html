@@ -19,7 +19,11 @@
     <a href="#contact">Контакты</a>
   </nav>
 </header>
-
+<div class="lang-switch">
+  <button onclick="setLang('ru')">RU</button>
+  <button onclick="setLang('en')">EN</button>
+  <button onclick="setLang('vi')">VI</button>
+</div>
 
 <section class="hero" id="home">
   <h1>Ресторан «У Володи»</h1>
@@ -104,5 +108,25 @@
 </footer>
 
 
-</body>
+<script>
+function setLang(lang) {
+
+  if(lang === "ru") {
+    document.querySelector("h1").innerText = "Ресторан «У Володи»";
+    document.querySelector(".hero p").innerText = "Домашняя кухня на севере Нячанга";
+  }
+
+  if(lang === "en") {
+    document.querySelector("h1").innerText = "Volodi Restaurant";
+    document.querySelector(".hero p").innerText = "Homemade food in North Nha Trang";
+  }
+
+  if(lang === "vi") {
+    document.querySelector("h1").innerText = "Nhà hàng Volodi";
+    document.querySelector(".hero p").innerText = "Ẩm thực gia đình tại Bắc Nha Trang";
+  }
+
+}
+</script>
+/body>
 </html>
