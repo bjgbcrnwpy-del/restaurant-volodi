@@ -1,31 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ресторан «У Володи» — Нячанг</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Montserrat',sans-serif;
+}
+
+body{
+background:#064635;
+color:#fff;
+scroll-behavior:smooth;
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,0.9);
+padding:15px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
+
+.logo{
+font-size:22px;
+font-weight:700;
+}
+
+nav a{
+color:#fff;
+margin:0 15px;
+text-decoration:none;
+font-weight:500;
+}
+
+nav a:hover{
+color:#00ff99;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('1.jpeg') center/cover no-repeat;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:50px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:20px;
+opacity:0.9;
+}
+
+.hero .buttons{
+margin-top:30px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:12px 28px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn-main{
+background:#00c57a;
+color:#000;
+}
+
+.btn-main:hover{
+background:#00ff99;
+}
+
+.btn-outline{
+border:2px solid #00ff99;
+color:#00ff99;
+}
+
+.btn-outline:hover{
+background:#00ff99;
+color:#000;
+}
+
+/* SECTIONS */
+
+section{
+padding:90px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:36px;
+margin-bottom:50px;
+}
+
+/* ABOUT */
+
+.about{
+background:#04372a;
+line-height:1.7;
+font-size:18px;
+text-align:center;
+}
+
+/* MENU */
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.dish-card{
+background:#02251d;
+border-radius:15px;
+overflow:hidden;
+transition:0.3s;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.dish-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 40px rgba(0,0,0,0.6);
+}
+
+.dish-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.info{
+padding:20px;
+}
+
+.info h3{
+margin-bottom:10px;
+}
+
+.desc{
+opacity:0.85;
+margin-bottom:10px;
+}
+
+.info ul{
+font-size:14px;
+margin:10px 0;
+padding-left:18px;
+opacity:0.8;
+}
+
+.price{
+margin-top:15px;
+font-size:20px;
+font-weight:700;
+color:#00ff99;
+}
+
+/* REVIEWS */
+
+.reviews{
+background:#04372a;
+text-align:center;
+}
+
+.review-box{
+max-width:700px;
+margin:0 auto;
+font-size:18px;
+line-height:1.6;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+.contact a{
+display:inline-block;
+margin:10px;
+}
+
+/* FOOTER */
+
+footer{
+background:#000;
+padding:20px;
+text-align:center;
+opacity:0.7;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+header{
+padding:15px 25px;
+flex-direction:column;
+gap:10px;
+}
+
+.hero h1{
+font-size:36px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">🍽 У Володи</div>
+
+<nav>
+<a href="#home">Главная</a>
+<a href="#about">О нас</a>
+<a href="#menu">Меню</a>
+<a href="#reviews">Отзывы</a>
+<a href="#contact">Контакты</a>
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<h1>Ресторан «У Володи»</h1>
+
+<p>Домашняя кухня на севере Нячанга — вкусно, честно и с душой</p>
+
+<div class="buttons">
+
+<a href="https://t.me/NhaTrangFoodBot" class="btn btn-main">Заказать в Telegram</a>
+
+<a href="#menu" class="btn btn-outline">Смотреть меню</a>
+
+<a href="https://maps.app.goo.gl/AqrXsXDzBmLCGXov6" class="btn btn-outline">Маршрут</a>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<h2 class="section-title">О нас</h2>
+
+<p>
+Ресторан «У Володи» — это место, где готовят как для своей семьи.
+Мы работаем с 2017 года и каждый день радуем гостей настоящей домашней кухней.
+Только свежие продукты, честные порции и забота о каждом клиенте.
+</p>
+
+</section>
+
+
+<!-- MENU -->
+
 <section id="menu">
 
-<h2>Наше меню</h2>
+<h2 class="section-title">Наше меню</h2>
 
 <div class="menu-grid">
 
 
-<!-- БЛЮДО 1 -->
-
 <div class="dish-card">
 
-<img src="Images/steak.jpg" alt="Жареная говядина">
+<img src="1.jpeg">
 
 <div class="info">
 
-<h3>Жареная говяжья вырезка (3 шт.)</h3>
+<h3>Жареная говяжья вырезка</h3>
 
-<p>
-Нежные куски говяжьей вырезки,
-обжаренные с чесноком и специями.
+<p class="desc">
+Нежная говядина с чесноком и специями.
 </p>
 
-<ul class="dish-list">
-<li>Говяжья вырезка</li>
+<ul>
+<li>Говядина</li>
 <li>Чеснок</li>
-<li>Сливочное масло</li>
-<li>Соль, перец</li>
-<li>Рис / картофель фри</li>
+<li>Масло</li>
+<li>Рис / картофель</li>
 </ul>
 
 <p>Вес: 230 г</p>
@@ -36,61 +328,77 @@
 </div>
 
 
-<!-- БЛЮДО 2 -->
-
 <div class="dish-card">
 
-<img src="Images/soup.jpg" alt="Борщ">
+<img src="fish sebu.jpeg">
 
 <div class="info">
 
-<h3>Домашний борщ</h3>
+<h3>Жареная рыба</h3>
 
-<p>
-Классический борщ по домашнему рецепту
-со сметаной и зеленью.
+<p class="desc">
+Хрустящая рыба с лимоном и соусом.
 </p>
 
-<ul class="dish-list">
-<li>Говядина</li>
-<li>Свекла</li>
-<li>Картофель</li>
-<li>Капуста</li>
-<li>Сметана</li>
-</ul>
-
-<p>Вес: 350 г</p>
-
-<div class="price">65 000 VND</div>
-
-</div>
-</div>
-
-
-<!-- БЛЮДО 3 -->
-
-<div class="dish-card">
-
-<img src="Images/pelmeni.jpg" alt="Пельмени">
-
-<div class="info">
-
-<h3>Домашние пельмени</h3>
-
-<p>
-Ручная лепка, сочная начинка,
-подаются со сметаной.
-</p>
-
-<ul class="dish-list">
-<li>Говядина</li>
-<li>Свинина</li>
-<li>Лук</li>
-<li>Тесто</li>
-<li>Сметана</li>
+<ul>
+<li>Рыба</li>
+<li>Соус</li>
+<li>Лимон</li>
 </ul>
 
 <p>Вес: 300 г</p>
+
+<div class="price">70 000 VND</div>
+
+</div>
+</div>
+
+
+<div class="dish-card">
+
+<img src="kalmar.jpeg">
+
+<div class="info">
+
+<h3>Кальмар на гриле</h3>
+
+<p class="desc">
+Нежный кальмар с чесночным соусом.
+</p>
+
+<ul>
+<li>Кальмар</li>
+<li>Соус</li>
+<li>Масло</li>
+</ul>
+
+<p>Вес: 250 г</p>
+
+<div class="price">85 000 VND</div>
+
+</div>
+</div>
+
+
+<div class="dish-card">
+
+<img src="okun.jpeg">
+
+<div class="info">
+
+<h3>Окунь с овощами</h3>
+
+<p class="desc">
+Филе окуня с овощами и специями.
+</p>
+
+<ul>
+<li>Окунь</li>
+<li>Овощи</li>
+<li>Соус</li>
+</ul>
+
+<p>Вес: 280 г</p>
 
 <div class="price">75 000 VND</div>
 
@@ -100,3 +408,56 @@
 
 </div>
 </section>
+
+
+<!-- REVIEWS -->
+
+<section class="reviews" id="reviews">
+
+<h2 class="section-title">Отзывы гостей</h2>
+
+<div class="review-box">
+
+<p>
+⭐️⭐️⭐️⭐️⭐️ <br><br>
+Наш рейтинг на Google — 4.9/5<br>
+Более 300 довольных гостей
+</p>
+
+<br>
+
+<a href="https://maps.app.goo.gl/AqrXsXDzBmLCGXov6" class="btn btn-main">
+Оставить отзыв
+</a>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h2 class="section-title">Как нас найти</h2>
+
+<p>
+20 Nguyễn Hiền, Vĩnh Hải, Nha Trang
+</p>
+
+<a href="https://maps.app.goo.gl/AqrXsXDzBmLCGXov6" class="btn btn-outline">
+Построить маршрут
+</a>
+
+</section>
+
+
+<footer>
+
+© 2026 Ресторан «У Володи» — Нячанг
+
+</footer>
+
+
+</body>
+</html>
