@@ -3,355 +3,330 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ресторан «У Володи» | Nha Trang</title>
 
-<title>Ресторан «У Володи»</title>
-
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 
-body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    background:linear-gradient(180deg,#002b24,#014038);
-    color:white;
+:root{
+--green:#0f3d2e;
+--gold:#c8a951;
+--light:#f8f8f8;
 }
 
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+font-family:Montserrat,sans-serif;
+background:#081f17;
+color:white;
+}
+
+/* HEADER */
+
 header{
-    background:#001f1a;
-    padding:15px 40px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url("fishsebu.jpeg");
+background-size:cover;
+background-position:center;
+padding:40px 20px 100px;
+text-align:center;
 }
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:15px;
+width:140px;
+margin-bottom:20px;
 }
 
-.logo img{
-    width:50px;
+h1{
+font-family:Playfair Display;
+font-size:48px;
+margin-bottom:10px;
+color:var(--gold);
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-    font-weight:bold;
+.subtitle{
+font-size:18px;
+opacity:.9;
+margin-bottom:30px;
 }
 
-nav a:hover{
-    color:#00ff99;
+/* BUTTONS */
+
+.buttons{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
 }
+
+.btn{
+background:var(--green);
+color:white;
+padding:14px 26px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+border:2px solid var(--gold);
+}
+
+.btn:hover{
+background:var(--gold);
+color:black;
+transform:translateY(-3px);
+}
+
+/* SECTIONS */
 
 section{
-    padding:60px 40px;
+padding:70px 20px;
+max-width:1200px;
+margin:auto;
 }
 
-h1,h2{
-    text-align:center;
-    margin-bottom:30px;
+h2{
+text-align:center;
+font-family:Playfair Display;
+font-size:36px;
+margin-bottom:40px;
+color:var(--gold);
 }
 
-/* HERO */
+/* ABOUT */
 
-.hero{
-    text-align:center;
-}
-
-.hero h1{
-    font-size:48px;
-}
-
-.hero p{
-    max-width:700px;
-    margin:auto;
-    font-size:18px;
+.about{
+text-align:center;
+max-width:800px;
+margin:auto;
+line-height:1.7;
+font-size:17px;
+opacity:.95;
 }
 
 /* MENU */
 
 .menu{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
 }
 
 .card{
-    background:rgba(255,255,255,0.05);
-    border-radius:20px;
-    padding:20px;
-    box-shadow:0 0 15px rgba(0,0,0,0.4);
-    transition:0.3s;
+background:#0f2f24;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 15px 30px rgba(0,0,0,.5);
+transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-5px);
+transform:translateY(-10px);
 }
 
 .card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-    border-radius:15px;
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card-body{
+padding:20px;
 }
 
 .card h3{
-    margin-top:15px;
+font-size:20px;
+margin-bottom:10px;
+color:var(--gold);
+}
+
+.card p{
+font-size:14px;
+opacity:.9;
+line-height:1.5;
+margin-bottom:8px;
 }
 
 .price{
-    color:#00ff99;
-    font-size:18px;
-    font-weight:bold;
+font-weight:700;
+color:#ffd700;
 }
 
-.order-btn{
-    display:block;
-    margin-top:15px;
-    padding:10px;
-    background:#00ff99;
-    color:#003b30;
-    text-align:center;
-    border-radius:10px;
-    font-weight:bold;
-    text-decoration:none;
+/* REVIEWS */
+
+.reviews{
+text-align:center;
+background:#0f2f24;
+border-radius:20px;
+padding:50px 20px;
 }
 
-.order-btn:hover{
-    background:#00cc77;
-}
-
-/* CONTACT */
-
-.contact{
-    text-align:center;
-}
-
-.contact a{
-    color:#00ff99;
-    text-decoration:none;
-    font-size:18px;
+.reviews p{
+font-size:18px;
+margin-bottom:25px;
 }
 
 /* FOOTER */
 
 footer{
-    background:#001f1a;
-    text-align:center;
-    padding:20px;
-    font-size:14px;
-    opacity:0.8;
+background:#06140f;
+padding:30px;
+text-align:center;
+font-size:14px;
+opacity:.8;
 }
 
 </style>
-
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
 
-<div class="logo">
-    <img src="logo.png" alt="Лого">
-    <h2>У Володи</h2>
-</div>
-
-<nav>
-    <a href="#about">О нас</a>
-    <a href="#menu">Меню</a>
-    <a href="#contact">Контакты</a>
-</nav>
-
-</header>
-
-
-<!-- HERO -->
-
-<section class="hero">
+<img src="logo.png" class="logo">
 
 <h1>Ресторан «У Володи»</h1>
 
-<p>
-Лучшие блюда европейской и азиатской кухни.
-Свежие продукты. Большие порции. Онлайн-заказ.
-</p>
+<p class="subtitle">Авторская кухня и свежие морепродукты в Нячанге</p>
 
-</section>
+<div class="buttons">
 
+<a class="btn" href="https://t.me/NhaTrangFoodBot" target="_blank">
+Заказать онлайн
+</a>
+
+<a class="btn" href="https://maps.app.goo.gl/AqrXsXDzBmLCGXov6" target="_blank">
+Маршрут
+</a>
+
+<a class="btn" href="https://maps.app.goo.gl/AqrXsXDzBmLCGXov6" target="_blank">
+Отзывы Google
+</a>
+
+</div>
+
+</header>
 
 <!-- ABOUT -->
 
-<section id="about">
+<section>
 
-<h2>О нас</h2>
+<h2>О ресторане</h2>
 
-<p style="max-width:800px;margin:auto;text-align:center;font-size:18px;">
-Мы готовим с душой и заботой о каждом госте.
-У нас уютная атмосфера, вкусная еда и быстрый сервис.
-Вы можете заказать блюда онлайн через Telegram.
+<div class="about">
+
+<p>
+«У Володи» — это уютный ресторан в самом сердце Нячанга, где сочетаются европейские традиции, свежие морепродукты и домашний подход к каждому гостю.
 </p>
+
+<p>
+Мы готовим из лучших ингредиентов, уделяем внимание деталям и создаём атмосферу, в которую хочется возвращаться.
+</p>
+
+</div>
 
 </section>
 
-
 <!-- MENU -->
 
-<section id="menu">
+<section>
 
-<h2>Меню</h2>
+<h2>Наше меню</h2>
 
 <div class="menu">
 
 <!-- 1 -->
 
 <div class="card">
-
 <img src="goviasgia.jpeg">
-
+<div class="card-body">
 <h3>Жареная говяжья вырезка</h3>
-
-<p>
-Нежные куски говядины с чесноком и специями.<br>
-Состав: говядина, чеснок, масло, специи.<br>
-Вес: 230 г
-</p>
-
-<p class="price">90.000 VND</p>
-
-<a class="order-btn"
-href="https://t.me/your_telegram?text=Хочу заказать Жареную говяжью вырезку">
-Заказать в Telegram
-</a>
-
+<p>Нежная говядина с чесноком и специями</p>
+<p>Вес: 230 г</p>
+<p class="price">90 000 VND</p>
 </div>
-
+</div>
 
 <!-- 2 -->
 
 <div class="card">
-
 <img src="fishsebu.jpeg">
-
+<div class="card-body">
 <h3>Рыба Себу</h3>
-
-<p>
-Свежая морская рыба на гриле.<br>
-Состав: рыба, лимон, специи.<br>
-Вес: 250 г
-</p>
-
-<p class="price">85.000 VND</p>
-
-<a class="order-btn"
-href="https://t.me/your_telegram?text=Хочу заказать Рыбу Себу">
-Заказать в Telegram
-</a>
-
+<p>Жареная рыба с соусом и овощами</p>
+<p>Вес: 250 г</p>
+<p class="price">85 000 VND</p>
 </div>
-
+</div>
 
 <!-- 3 -->
 
 <div class="card">
-
 <img src="kalmar.jpeg">
-
-<h3>Кальмар на гриле</h3>
-
-<p>
-Нежный кальмар с соусом.<br>
-Состав: кальмар, чеснок, соус.<br>
-Вес: 220 г
-</p>
-
-<p class="price">75.000 VND</p>
-
-<a class="order-btn"
-href="https://t.me/your_telegram?text=Хочу заказать Кальмар на гриле">
-Заказать в Telegram
-</a>
-
+<div class="card-body">
+<h3>Кальмар гриль</h3>
+<p>Кальмар на гриле с чесночным соусом</p>
+<p>Вес: 200 г</p>
+<p class="price">75 000 VND</p>
 </div>
-
+</div>
 
 <!-- 4 -->
 
 <div class="card">
-
 <img src="okun.jpeg">
-
-<h3>Окунь с соусом</h3>
-
-<p>
-Филе окуня в авторском соусе.<br>
-Состав: рыба, соус, специи.<br>
-Вес: 240 г
-</p>
-
-<p class="price">80.000 VND</p>
-
-<a class="order-btn"
-href="https://t.me/your_telegram?text=Хочу заказать Окунь с соусом">
-Заказать в Telegram
-</a>
-
+<div class="card-body">
+<h3>Окунь в соусе</h3>
+<p>Филе окуня в фирменном соусе</p>
+<p>Вес: 240 г</p>
+<p class="price">88 000 VND</p>
 </div>
-
+</div>
 
 <!-- 5 -->
 
 <div class="card">
-
 <img src="spagetimoreprodukti.jpeg">
-
+<div class="card-body">
 <h3>Спагетти с морепродуктами</h3>
+<p>Креветки, кальмары, соус томатный</p>
+<p>Вес: 300 г</p>
+<p class="price">95 000 VND</p>
+</div>
+</div>
 
-<p>
-Паста с креветками и кальмарами.<br>
-Состав: паста, морепродукты, соус.<br>
-Вес: 260 г
-</p>
+</div>
 
-<p class="price">95.000 VND</p>
+</section>
 
-<a class="order-btn"
-href="https://t.me/your_telegram?text=Хочу заказать Спагетти с морепродуктами">
-Заказать в Telegram
+<!-- REVIEWS -->
+
+<section>
+
+<h2>Отзывы гостей</h2>
+
+<div class="reviews">
+
+<p>Мы будем рады вашему отзыву — это помогает нам становиться лучше ⭐</p>
+
+<a class="btn" href="https://maps.app.goo.gl/AqrXsXDzBmLCGXov6" target="_blank">
+Оставить отзыв в Google
 </a>
 
 </div>
 
-
-</div>
-
 </section>
 
-
-<!-- CONTACT -->
-
-<section id="contact" class="contact">
-
-<h2>Контакты</h2>
-
-<p>📍 Вьетнам, Nha Trang</p>
-
-<p>
-Telegram для заказов:<br>
-<a href="https://t.me/your_telegram">@your_telegram</a>
-</p>
-
-</section>
-
+<!-- FOOTER -->
 
 <footer>
 
-© 2026 Ресторан «У Володи». Все права защищены.
+© 2026 Ресторан «У Володи» | Nha Trang  
+Все права защищены
 
 </footer>
-
 
 </body>
 </html>
