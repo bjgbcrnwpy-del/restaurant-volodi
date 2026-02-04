@@ -1,24 +1,192 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<title>Ресторан У Володи — Нячанг</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Ресторан «У Володи» — Нячанг</title>
 
-<link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+
+header {
+  background: #111;
+  color: white;
+  padding: 15px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+}
+
+nav a:hover {
+  color: orange;
+}
+
+.lang button {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.lang button:hover {
+  background: orange;
+  color: black;
+}
+
+/* Hero */
+
+.hero {
+  height: 100vh;
+
+  background:
+  linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+  url("Images/photo_2026-02-03_17-01-57.jpeg");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 22px;
+  margin-bottom: 30px;
+  max-width: 700px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.hero-buttons a {
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.btn-main {
+  background: orange;
+  color: black;
+}
+
+.btn-second {
+  border: 2px solid white;
+  color: white;
+}
+
+/* About */
+
+.about {
+  background: #111;
+  color: white;
+  padding: 70px 15%;
+}
+
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* Reviews */
+
+.reviews {
+  background: #f5f5f5;
+  padding: 70px 10%;
+  text-align: center;
+}
+
+.reviews h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.review-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 20px;
+}
+
+.review {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.review h4 {
+  margin-bottom: 10px;
+  color: orange;
+}
+
+/* Footer */
+
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+  </style>
 </head>
+
 <body>
 
+<!-- Header -->
+
 <header>
+
   <div class="logo">🍽 У Володи</div>
 
   <nav>
-    <a href="#home" data-key="navHome">Главная</a>
-    <a href="#about" data-key="navAbout">О нас</a>
-    <a href="#menu" data-key="navMenu">Меню</a>
-    <a href="#reviews" data-key="navReviews">Отзывы</a>
-    <a href="#contact" data-key="navContact">Контакты</a>
+    <a href="#home">Главная</a>
+    <a href="#about">О нас</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#contact">Контакты</a>
   </nav>
 
   <div class="lang">
@@ -26,298 +194,152 @@
     <button onclick="setLang('en')">EN</button>
     <button onclick="setLang('vi')">VI</button>
   </div>
+
 </header>
 
 
-<!-- HERO -->
+<!-- Hero -->
+
 <section class="hero" id="home">
 
-<h1 data-key="heroTitle">Ресторан «У Володи»</h1>
+  <h1 id="title">Ресторан «У Володи»</h1>
 
-<p data-key="heroSubtitle">Домашняя кухня на севере Нячанга</p>
+  <p id="subtitle">
+    Домашняя кухня на севере Нячанга — вкусно, честно и с душой
+  </p>
 
-<div class="hero-buttons">
-  <a href="https://t.me/NhaTrangFoodBot" class="btn main" data-key="orderBtn">
-    Заказать в Telegram
-  </a>
+  <div class="hero-buttons">
 
-  <a href="#menu" class="btn" data-key="menuBtn">
-    Меню
-  </a>
-</div>
+    <a href="https://t.me/NhaTrangFoodBot" class="btn-main" id="order">
+      Заказать в Telegram
+    </a>
+
+    <a href="#about" class="btn-second" id="menu">
+      Подробнее
+    </a>
+
+  </div>
 
 </section>
 
 
-<!-- ABOUT -->
+<!-- About -->
+
 <section class="about" id="about">
 
-<h2 data-key="aboutTitle">О ресторане</h2>
+  <h2 id="aboutTitle">О ресторане</h2>
 
-<p data-key="aboutText1">
-Мы готовим с любовью и заботой, как для своей семьи.
-</p>
+  <p id="aboutText1">
+    «У Володи» — это место, где готовят по-домашнему, как для своей семьи.
+    Мы используем только свежие продукты и проверенные рецепты.
+  </p>
 
-<p data-key="aboutText2">
-С 2017 года мы радуем гостей настоящей домашней кухней.
-</p>
-
-<ul>
-  <li data-key="about1">✔ Свежие продукты</li>
-  <li data-key="about2">✔ Большие порции</li>
-  <li data-key="about3">✔ Честные цены</li>
-  <li data-key="about4">✔ Русскоязычный хозяин</li>
-</ul>
+  <p id="aboutText2">
+    С 2017 года мы радуем гостей Нячанга настоящей русской и европейской кухней.
+    У нас большие порции, честные цены и тёплая атмосфера.
+  </p>
 
 </section>
 
 
-<!-- MENU -->
-<section class="menu" id="menu">
+<!-- Reviews -->
 
-<h2 data-key="menuTitle">Наше меню</h2>
-
-<div class="menu-grid">
-
-<div class="card">
-<img src="photo1.jpeg">
-<h3 data-key="dish1">Жареная говядина</h3>
-<p>90 000 ₫</p>
-</div>
-
-<div class="card">
-<img src="photo2.jpeg">
-<h3 data-key="dish2">Кальмар в соусе</h3>
-<p>120 000 ₫</p>
-</div>
-
-<div class="card">
-<img src="photo3.jpeg">
-<h3 data-key="dish3">Рыба на гриле</h3>
-<p>150 000 ₫</p>
-</div>
-
-<div class="card">
-<img src="photo4.jpeg">
-<h3 data-key="dish4">Лосось с рисом</h3>
-<p>140 000 ₫</p>
-</div>
-
-<div class="card">
-<img src="photo5.jpeg">
-<h3 data-key="dish5">Паста с морепродуктами</h3>
-<p>130 000 ₫</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- REVIEWS -->
 <section class="reviews" id="reviews">
 
-<h2 data-key="reviewsTitle">Отзывы гостей</h2>
+  <h2 id="reviewsTitle">Отзывы гостей</h2>
 
-<div class="review">
+  <div class="review-box">
 
-<p data-key="rev1">
-⭐️⭐️⭐️⭐️⭐️ Очень вкусно! Лучший ресторан в Нячанге.
-</p>
-<span>— Алексей</span>
+    <div class="review">
+      <h4>Алексей</h4>
+      <p>Лучший борщ в Нячанге! Очень вкусно 👍</p>
+    </div>
 
-</div>
+    <div class="review">
+      <h4>Марина</h4>
+      <p>Заказываем постоянно. Всё всегда свежее ❤️</p>
+    </div>
 
-<div class="review">
+    <div class="review">
+      <h4>Дмитрий</h4>
+      <p>Отличное место, большие порции и цены норм!</p>
+    </div>
 
-<p data-key="rev2">
-Отличные порции и дружелюбный хозяин!
-</p>
-<span>— Марина</span>
-
-</div>
-
-<div class="review">
-
-<p data-key="rev3">
-Всегда заходим сюда, когда приезжаем во Вьетнам.
-</p>
-<span>— Дмитрий</span>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
+<!-- Footer -->
 
-<h2 data-key="contactTitle">Как нас найти</h2>
+<footer id="contact">
 
-<p data-key="address">
-20 Nguyễn Hiền, Vĩnh Hải, Nha Trang
-</p>
+  📍 Нячанг, Вьетнам  
+  <br>
+  📱 Telegram: @NhaTrangFoodBot  
+  <br><br>
+  © 2017–2026 Ресторан «У Володи»
 
-<a href="https://maps.google.com/?q=20+Nguyễn+Hiền+Nha+Trang" target="_blank" class="btn main" data-key="mapBtn">
-Построить маршрут
-</a>
-
-</section>
-
-
-<footer>
-<p>© 2026 Ресторан «У Володи»</p>
 </footer>
 
 
+<!-- Language Script -->
 
-<!-- LANG SCRIPT -->
 <script>
 
-const texts = {
+const data = {
 
 ru: {
-navHome:"Главная",
-navAbout:"О нас",
-navMenu:"Меню",
-navReviews:"Отзывы",
-navContact:"Контакты",
-
-heroTitle:"Ресторан «У Володи»",
-heroSubtitle:"Домашняя кухня на севере Нячанга",
-
-orderBtn:"Заказать в Telegram",
-menuBtn:"Меню",
-
-aboutTitle:"О ресторане",
-aboutText1:"Мы готовим с любовью и заботой, как для своей семьи.",
-aboutText2:"С 2017 года мы радуем гостей настоящей домашней кухней.",
-
-about1:"✔ Свежие продукты",
-about2:"✔ Большие порции",
-about3:"✔ Честные цены",
-about4:"✔ Русскоязычный хозяин",
-
-menuTitle:"Наше меню",
-
-dish1:"Жареная говядина",
-dish2:"Кальмар в соусе",
-dish3:"Рыба на гриле",
-dish4:"Лосось с рисом",
-dish5:"Паста с морепродуктами",
-
-reviewsTitle:"Отзывы гостей",
-
-rev1:"⭐️⭐️⭐️⭐️⭐️ Очень вкусно! Лучший ресторан в Нячанге.",
-rev2:"Отличные порции и дружелюбный хозяин!",
-rev3:"Всегда заходим сюда, когда приезжаем во Вьетнам.",
-
-contactTitle:"Как нас найти",
-address:"20 Nguyễn Hiền, Vĩnh Hải, Nha Trang",
-mapBtn:"Построить маршрут"
+title: "Ресторан «У Володи»",
+subtitle: "Домашняя кухня на севере Нячанга — вкусно, честно и с душой",
+order: "Заказать в Telegram",
+menu: "Подробнее",
+aboutTitle: "О ресторане",
+aboutText1: "«У Володи» — это место, где готовят по-домашнему, как для своей семьи.",
+aboutText2: "С 2017 года мы радуем гостей Нячанга настоящей кухней.",
+reviewsTitle: "Отзывы гостей"
 },
-
 
 en: {
-navHome:"Home",
-navAbout:"About",
-navMenu:"Menu",
-navReviews:"Reviews",
-navContact:"Contacts",
-
-heroTitle:"Volodi Restaurant",
-heroSubtitle:"Home cuisine in North Nha Trang",
-
-orderBtn:"Order via Telegram",
-menuBtn:"Menu",
-
-aboutTitle:"About Us",
-aboutText1:"We cook with love like for our family.",
-aboutText2:"Since 2017 we serve homemade food.",
-
-about1:"✔ Fresh products",
-about2:"✔ Big portions",
-about3:"✔ Fair prices",
-about4:"✔ Russian owner",
-
-menuTitle:"Our Menu",
-
-dish1:"Fried Beef",
-dish2:"Squid in Sauce",
-dish3:"Grilled Fish",
-dish4:"Salmon with Rice",
-dish5:"Seafood Pasta",
-
-reviewsTitle:"Customer Reviews",
-
-rev1:"⭐️⭐️⭐️⭐️⭐️ Very tasty! Best in Nha Trang.",
-rev2:"Great food and friendly owner!",
-rev3:"Always come here when visiting.",
-
-contactTitle:"Find Us",
-address:"20 Nguyen Hien, Nha Trang",
-mapBtn:"Build Route"
+title: "Volodya Restaurant",
+subtitle: "Home-style food in Nha Trang — tasty and honest",
+order: "Order via Telegram",
+menu: "More info",
+aboutTitle: "About us",
+aboutText1: "We cook like for our family using fresh ingredients.",
+aboutText2: "Since 2017 we serve real home cuisine.",
+reviewsTitle: "Reviews"
 },
 
-
 vi: {
-navHome:"Trang chủ",
-navAbout:"Giới thiệu",
-navMenu:"Thực đơn",
-navReviews:"Đánh giá",
-navContact:"Liên hệ",
-
-heroTitle:"Nhà hàng Volodi",
-heroSubtitle:"Ẩm thực gia đình tại Bắc Nha Trang",
-
-orderBtn:"Đặt qua Telegram",
-menuBtn:"Thực đơn",
-
-aboutTitle:"Về chúng tôi",
-aboutText1:"Chúng tôi nấu ăn như cho gia đình.",
-aboutText2:"Phục vụ từ năm 2017.",
-
-about1:"✔ Thực phẩm tươi",
-about2:"✔ Phần lớn",
-about3:"✔ Giá hợp lý",
-about4:"✔ Chủ người Nga",
-
-menuTitle:"Thực đơn",
-
-dish1:"Bò chiên",
-dish2:"Mực sốt",
-dish3:"Cá nướng",
-dish4:"Cá hồi cơm",
-dish5:"Mì hải sản",
-
-reviewsTitle:"Đánh giá",
-
-rev1:"⭐️⭐️⭐️⭐️⭐️ Rất ngon!",
-rev2:"Chủ quán thân thiện!",
-rev3:"Luôn quay lại!",
-
-contactTitle:"Địa chỉ",
-address:"20 Nguyễn Hiền, Nha Trang",
-mapBtn:"Chỉ đường"
+title: "Nhà hàng Volodya",
+subtitle: "Ẩm thực gia đình tại Nha Trang",
+order: "Đặt qua Telegram",
+menu: "Chi tiết",
+aboutTitle: "Giới thiệu",
+aboutText1: "Chúng tôi nấu ăn như cho gia đình mình.",
+aboutText2: "Phục vụ từ năm 2017.",
+reviewsTitle: "Đánh giá"
 }
 
 };
 
 
-function setLang(lang){
+function setLang(lang) {
 
-document.querySelectorAll("[data-key]").forEach(el=>{
-  const key = el.dataset.key;
-  el.innerText = texts[lang][key];
-});
-
-localStorage.setItem("lang",lang);
+  document.getElementById("title").innerText = data[lang].title;
+  document.getElementById("subtitle").innerText = data[lang].subtitle;
+  document.getElementById("order").innerText = data[lang].order;
+  document.getElementById("menu").innerText = data[lang].menu;
+  document.getElementById("aboutTitle").innerText = data[lang].aboutTitle;
+  document.getElementById("aboutText1").innerText = data[lang].aboutText1;
+  document.getElementById("aboutText2").innerText = data[lang].aboutText2;
+  document.getElementById("reviewsTitle").innerText = data[lang].reviewsTitle;
 
 }
 
-setLang(localStorage.getItem("lang") || "ru");
-
 </script>
+
 
 </body>
 </html>
