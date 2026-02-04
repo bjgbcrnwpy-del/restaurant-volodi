@@ -1,178 +1,108 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Ресторан у Володи — Нячанг</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-body {
-  background: #0f0f0f;
-  color: #fff;
-}
+  <link rel="stylesheet" href="style.css">
 
+</head>
+<body>
 
-/* HEADER */
+<header>
+  <div class="logo">🍽 У Володи</div>
 
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #111;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 40px;
-  z-index: 1000;
-}
-
-.logo {
-  font-weight: bold;
-  font-size: 22px;
-}
-
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: orange;
-}
+  <nav>
+    <a href="#home">Главная</a>
+    <a href="#menu">Меню</a>
+    <a href="#contact">Контакты</a>
+  </nav>
+</header>
 
 
-/* HERO */
+<section class="hero" id="home">
+  <h1>Ресторан «У Володи»</h1>
 
-.hero {
-  height: 100vh;
-  background:
-  linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8)),
-  url("photo1.jpeg");
+  <p>Домашняя кухня на севере Нячанга</p>
 
-  background-size: cover;
-  background-position: center;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-  padding: 40px;
-}
-
-.hero h1 {
-  font-size: 60px;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 22px;
-  margin-bottom: 30px;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 20px;
-}
+  <div class="hero-buttons">
+    <a href="https://t.me/NhaTrangFoodBot" class="btn main">Заказать в Telegram</a>
+    <a href="#menu" class="btn">Меню</a>
+  </div>
+</section>
 
 
-/* BUTTONS */
+<section class="menu" id="menu">
 
-.btn {
-  padding: 15px 25px;
-  border: 1px solid white;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: 0.3s;
-}
+  <h2>Наше меню</h2>
 
-.btn:hover {
-  background: white;
-  color: black;
-}
+  <div class="menu-grid">
 
-.btn.main {
-  background: orange;
-  border: none;
-  color: black;
-}
+    <div class="card">
+      <img src="photo1.jpeg">
+      <h3>Жареная говядина</h3>
+      <p>С чесноком и овощами</p>
+      <span>90 000 ₫</span>
+    </div>
 
-.btn.main:hover {
-  background: darkorange;
-}
+    <div class="card">
+      <img src="photo2.jpeg">
+      <h3>Кальмар в соусе</h3>
+      <p>В томатном соусе</p>
+      <span>120 000 ₫</span>
+    </div>
 
+    <div class="card">
+      <img src="photo3.jpeg">
+      <h3>Жареная рыба</h3>
+      <p>С овощным гарниром</p>
+      <span>150 000 ₫</span>
+    </div>
 
-/* MENU */
+    <div class="card">
+      <img src="photo4.jpeg">
+      <h3>Лосось с рисом</h3>
+      <p>Фирменный соус</p>
+      <span>180 000 ₫</span>
+    </div>
 
-.menu {
-  padding: 120px 50px;
-  text-align: center;
-}
+    <div class="card">
+      <img src="photo5.jpeg">
+      <h3>Паста с морепродуктами</h3>
+      <p>Сливочный соус</p>
+      <span>140 000 ₫</span>
+    </div>
 
-.menu h2 {
-  font-size: 40px;
-  margin-bottom: 50px;
-}
+  </div>
 
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 30px;
-}
-
-.card {
-  background: #1a1a1a;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-}
-
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.card h3 {
-  margin: 15px 0 5px;
-}
-
-.card p {
-  opacity: 0.7;
-}
-
-.card span {
-  display: block;
-  margin: 15px;
-  font-weight: bold;
-  color: orange;
-}
+</section>
 
 
-/* CONTACT */
+<section class="contact" id="contact">
 
-.contact {
-  padding: 100px 30px;
-  background: #141414;
-  text-align: center;
-}
+  <h2>Как нас найти</h2>
 
-.contact p {
-  margin: 20px 0;
-  font-size: 18px;
-}
+  <p>
+    20 Nguyễn Hiền, Vĩnh Hải, Nha Trang<br>
+    150м от Scenia Bay
+  </p>
+
+  <a
+    class="btn main"
+    target="_blank"
+    href="https://maps.google.com/?q=20+Nguyễn+Hiền+Nha+Trang"
+  >
+    Построить маршрут
+  </a>
+
+</section>
 
 
-/* FOOTER */
+<footer>
+  © 2026 Ресторан «У Володи»
+</footer>
 
-footer {
-  padding: 20px;
-  background: black;
-  text-align: center;
-  opacity: 0.6;
-}
+
+</body>
+</html>
