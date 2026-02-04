@@ -1,374 +1,370 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Ресторан «У Володи»</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Ресторан «У Володи»</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Шрифт -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <style>
+<style>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Montserrat',sans-serif;
+}
 
-        body {
-            background: linear-gradient(135deg, #041f16, #063a28);
-            color: white;
-        }
+body{
+background:linear-gradient(135deg,#042016,#063b29);
+color:white;
+}
 
-        /* ================= HEADER ================= */
+/* ================= HEADER ================= */
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            background: rgba(0,0,0,0.5);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-        }
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 50px;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
+position:fixed;
+width:100%;
+z-index:1000;
+}
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 22px;
-            font-weight: 700;
-            color: #4cff9a;
-        }
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:22px;
+font-weight:700;
+color:#4cff9a;
+}
 
-        .logo img {
-            height: 45px;
-        }
+.logo img{
+height:45px;
+}
 
-        nav a {
-            margin-left: 25px;
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: 0.3s;
-        }
+nav a{
+margin-left:25px;
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
+}
 
-        nav a:hover {
-            color: #4cff9a;
-        }
+nav a:hover{
+color:#4cff9a;
+}
 
-        /* ================= HERO ================= */
+/* ================= HERO ================= */
 
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-        }
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
 
-        .hero h1 {
-            font-size: 50px;
-            color: #4cff9a;
-            margin-bottom: 20px;
-        }
+.hero h1{
+font-size:50px;
+color:#4cff9a;
+margin-bottom:20px;
+}
 
-        .hero p {
-            font-size: 18px;
-            max-width: 600px;
-            opacity: 0.9;
-            margin-bottom: 30px;
-        }
+.hero p{
+max-width:600px;
+opacity:0.9;
+margin-bottom:30px;
+}
 
-        .hero-buttons a {
-            padding: 14px 28px;
-            border-radius: 30px;
-            margin: 10px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: 0.3s;
-            display: inline-block;
-        }
+.hero-buttons a{
+padding:14px 30px;
+border-radius:30px;
+margin:10px;
+font-weight:600;
+text-decoration:none;
+transition:0.3s;
+display:inline-block;
+}
 
-        .btn-main {
-            background: #4cff9a;
-            color: black;
-        }
+.btn-main{
+background:#4cff9a;
+color:black;
+}
 
-        .btn-outline {
-            border: 2px solid #4cff9a;
-            color: #4cff9a;
-        }
+.btn-outline{
+border:2px solid #4cff9a;
+color:#4cff9a;
+}
 
-        .hero-buttons a:hover {
-            transform: scale(1.05);
-        }
+.hero-buttons a:hover{
+transform:scale(1.07);
+}
 
-        /* ================= MENU ================= */
+/* ================= MENU ================= */
 
-        section {
-            padding: 100px 50px;
-        }
+section{
+padding:100px 50px;
+}
 
-        h2 {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 50px;
-            color: #4cff9a;
-        }
+h2{
+text-align:center;
+font-size:36px;
+margin-bottom:50px;
+color:#4cff9a;
+}
 
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
 
-        .card {
-            background: rgba(255,255,255,0.05);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-            transition: 0.3s;
-        }
+.card{
+background:rgba(255,255,255,0.06);
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 0 25px rgba(0,0,0,0.6);
+transition:0.3s;
+}
 
-        .card:hover {
-            transform: translateY(-8px);
-        }
+.card:hover{
+transform:translateY(-10px);
+}
 
-        .card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
 
-        .card-content {
-            padding: 20px;
-        }
+.card-content{
+padding:20px;
+}
 
-        .card h3 {
-            color: #4cff9a;
-            margin-bottom: 10px;
-        }
+.card h3{
+color:#4cff9a;
+margin-bottom:10px;
+}
 
-        .price {
-            font-size: 20px;
-            font-weight: 700;
-            color: #4cff9a;
-            margin-top: 10px;
-        }
+.price{
+margin-top:10px;
+font-size:20px;
+font-weight:700;
+color:#4cff9a;
+}
 
-        /* ================= CONTACT ================= */
+/* ================= CONTACT ================= */
 
-        .contact {
-            text-align: center;
-        }
+.contact{
+text-align:center;
+}
 
-        .contact p {
-            margin: 10px 0;
-            opacity: 0.9;
-        }
+.contact p{
+margin:10px 0;
+opacity:0.9;
+}
 
-        footer {
-            background: black;
-            text-align: center;
-            padding: 20px;
-            opacity: 0.8;
-        }
+footer{
+background:black;
+text-align:center;
+padding:20px;
+opacity:0.8;
+}
 
-        @media(max-width: 768px) {
+@media(max-width:768px){
 
-            header {
-                padding: 15px 20px;
-                flex-direction: column;
-            }
+header{
+flex-direction:column;
+padding:15px;
+}
 
-            nav {
-                margin-top: 10px;
-            }
+nav{
+margin-top:10px;
+}
 
-            .hero h1 {
-                font-size: 36px;
-            }
+.hero h1{
+font-size:36px;
+}
 
-        }
+}
 
-    </style>
+</style>
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 
 <header>
 
-    <div class="logo">
-        <img src="logo.png" alt="Логотип">
-        У Володи
-    </div>
+<div class="logo">
+<img src="logo.png">
+У Володи
+</div>
 
-    <nav>
-        <a href="#home">Главная</a>
-        <a href="#menu">Меню</a>
-        <a href="#contact">Контакты</a>
-    </nav>
+<nav>
+<a href="#home">Главная</a>
+<a href="#menu">Меню</a>
+<a href="#contact">Контакты</a>
+</nav>
 
 </header>
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
-    <h1>Ресторан «У Володи»</h1>
+<h1>Ресторан «У Володи»</h1>
 
-    <p>
-        Домашняя русско-европейская кухня в Нячанге.
-        Вкусно. Честно. С душой.
-    </p>
+<p>
+Домашняя русско-европейская кухня в Нячанге.
+Вкусно. Честно. С душой.
+</p>
 
-    <div class="hero-buttons">
+<div class="hero-buttons">
 
-        <a href="#menu" class="btn-main">Меню</a>
+<a href="#menu" class="btn-main">Меню</a>
 
-        <a href="https://maps.app.goo.gl/AqrXsXDzBmLCGXov6"
-           target="_blank"
-           class="btn-outline">
-            📍 Маршрут
-        </a>
+<a href="https://maps.app.goo.gl/AqrXsXDzBmLCGXov6"
+target="_blank"
+class="btn-outline">
+📍 Маршрут
+</a>
 
-    </div>
+</div>
 
 </section>
 
-<!-- ================= MENU ================= -->
+<!-- MENU -->
 
 <section id="menu">
 
-    <h2>Наше меню</h2>
+<h2>Наше меню</h2>
 
-    <div class="menu-grid">
+<div class="menu-grid">
 
-        <!-- 1 -->
+<!-- 1 -->
 
-        <div class="card">
-            <img src="goviasgia.jpeg">
-            <div class="card-content">
+<div class="card">
+<img src="goviasgia.jpeg">
+<div class="card-content">
 
-                <h3>Жареная говяжья вырезка</h3>
+<h3>Жареная говяжья вырезка</h3>
 
-                <p>
-                    Нежные куски говядины с чесноком и специями.
-                    Подаётся с рисом или картофелем фри.
-                </p>
+<p>
+Нежные куски говядины с чесноком и специями.
+Подаётся с рисом или картофелем фри.
+</p>
 
-                <p>Вес: 230 г</p>
+<p>Вес: 230 г</p>
 
-                <div class="price">90 000 VND</div>
+<div class="price">90 000 VND</div>
 
-            </div>
-        </div>
+</div>
+</div>
 
-        <!-- 2 -->
+<!-- 2 -->
 
-        <div class="card">
-            <img src="fishsebu.jpeg">
-            <div class="card-content">
+<div class="card">
+<img src="fishsebu.jpeg">
+<div class="card-content">
 
-                <h3>Рыба Себу</h3>
+<h3>Рыба Себу</h3>
 
-                <p>
-                    Свежая морская рыба на гриле с лимоном.
-                </p>
+<p>
+Свежая морская рыба на гриле с лимоном.
+</p>
 
-                <p>Вес: 250 г</p>
+<p>Вес: 250 г</p>
 
-                <div class="price">85 000 VND</div>
+<div class="price">85 000 VND</div>
 
-            </div>
-        </div>
+</div>
+</div>
 
-        <!-- 3 -->
+<!-- 3 -->
 
-        <div class="card">
-            <img src="kalmar.jpeg">
-            <div class="card-content">
+<div class="card">
+<img src="kalmar.jpeg">
+<div class="card-content">
 
-                <h3>Кальмар на гриле</h3>
+<h3>Кальмар на гриле</h3>
 
-                <p>
-                    Нежный кальмар с соусом и чесноком.
-                </p>
+<p>
+Нежный кальмар с чесночным соусом.
+</p>
 
-                <p>Вес: 220 г</p>
+<p>Вес: 220 г</p>
 
-                <div class="price">75 000 VND</div>
+<div class="price">75 000 VND</div>
 
-            </div>
-        </div>
+</div>
+</div>
 
-        <!-- 4 -->
+<!-- 4 -->
 
-        <div class="card">
-            <img src="okun.jpeg">
-            <div class="card-content">
+<div class="card">
+<img src="okun.jpeg">
+<div class="card-content">
 
-                <h3>Окунь с соусом</h3>
+<h3>Окунь с соусом</h3>
 
-                <p>
-                    Филе окуня в авторском соусе.
-                </p>
+<p>
+Филе окуня в авторском соусе.
+</p>
 
-                <p>Вес: 240 г</p>
+<p>Вес: 240 г</p>
 
-                <div class="price">80 000 VND</div>
+<div class="price">80 000 VND</div>
 
-            </div>
-        </div>
+</div>
+</div>
 
-        <!-- 5 -->
+<!-- 5 -->
 
-        <div class="card">
-            <img src="spagetimoreprodukti.jpeg">
-            <div class="card-content">
+<div class="card">
+<img src="spagetimoreprodukti.jpeg">
+<div class="card-content">
 
-                <h3>Спагетти с морепродуктами</h3>
+<h3>Спагетти с морепродуктами</h3>
 
-                <p>
-                    Итальянская паста с морепродуктами.
-                </p>
+<p>
+Итальянская паста с морепродуктами.
+</p>
 
-                <p>Вес: 300 г</p>
+<p>Вес: 300 г</p>
 
-                <div class="price">95 000 VND</div>
+<div class="price">95 000 VND</div>
 
-            </div>
-        </div>
+</div>
+</div>
 
-    </div>
+</div>
 
 </section>
 
-<!-- ================= CONTACT ================= -->
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
 
-    <h2>Контакты</h2>
+<h2>Контакты</h2>
 
-    <p>📍 Нячанг, Вьетнам</p>
-
-    <p>📞 +84 000 000 000</p>
-
-    <p>🕒 10:00 – 23:00</p>
+<p>📍 Нячанг, Вьетнам</p>
+<p>📞 +84 000 000 000</p>
+<p>🕒 10:00 – 23:00</p>
 
 </section>
 
 <footer>
 
-    © 2026 Ресторан «У Володи»
+© 2026 Ресторан «У Володи»
 
 </footer>
 
