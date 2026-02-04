@@ -176,3 +176,23 @@ footer {
   text-align: center;
   opacity: 0.6;
 }
+.lang-switch {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.lang-switch button {
+  background: black;
+  color: white;
+  border: 1px solid #777;
+  padding: 6px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.lang-switch button:hover {
+  background: orange;
+  color: black;
+}
